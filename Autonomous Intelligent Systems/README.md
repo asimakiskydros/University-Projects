@@ -3,6 +3,7 @@
 project header:
 
 Use the SimBad environment to create a simple robot that can traverse an unknown environment and reach a lamp.
+
 Terms:
        * Your robot may have light sensors, SONARs, LASERs and/or bumpers.
        * Your robot may NOT know its global position, the lamp's global position, or any obstacle's global position ever. The use of getCoords() is strictly prohibited.
