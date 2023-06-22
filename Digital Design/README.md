@@ -1,4 +1,4 @@
-# Digital-Design-Project
+# Digital Design Project
 
 project header:
 
@@ -8,4 +8,4 @@ Design and implement the following in the Logisim environment:
    executed each time.
 2. A mod-9 sychronous up-counter using negative-edge-triggered JK flip flops.
 
-Original header in greek can be found in this repository, courtesy of Aristotle University of Thessalonica, CSD.
+*Original header in greek can be found in this directory, courtesy of Aristotle University of Thessalonica, CSD.*
