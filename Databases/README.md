@@ -1,4 +1,4 @@
-# Car-Dealership-Databases-Project
+# Databases Project
 
 Project header:
 
