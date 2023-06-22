@@ -1,4 +1,4 @@
-# Request-Reply-Messaging-App-Communication-Networks-Project
+# Communication Networks Project
 
 Project header:
 
@@ -31,4 +31,4 @@ At the bare minimum, the app should have the following:
    deletes the corresponding message from the user's inbox and returns "OK" on success and returns appropriate error messages
    on invalid authToken and non-existent messageID.
   
-  The original header in greek can be found in the pdf of this repository, courtesy of Aristotle University of Thessalonica, CSD.
+  *Original header in greek can be found in this directory, courtesy of Aristotle University of Thessalonica, CSD.*
