@@ -8,7 +8,7 @@ Implement the Binary Genetic Algorithm:
 * Use Single Point Mutation with a probability of 10%
 
 Test your algorithm by solving the following challenges:
-1. Maximize $F_1(x) = \text{#of '1' in the binary representation of } x$. Assume $x$ is 5-bit.
+1. Maximize $F_1(x) = \text{\#of '1' in the binary representation of } x$. Assume $x$ is 5-bit.
 2. Maximize $F_2(x) = x^2. Do it twice, first with $x$ being 4-bit and then 10-bit.
 3. Find $(x, y ,z) \ni x + y + z = t, \text{ for } t\in\mathbb{Z}$. Assume $x, y, z$ are 3-bit each. You may assume $t = 10$ also.
 
