@@ -3,6 +3,7 @@
 project header\*:
 
 Implement the Fourier Series algorithm and use it to approximate the following functions:
+
 $$
 f_1(x) = x, \text{ } x\in(-\pi, \pi]
 $$
