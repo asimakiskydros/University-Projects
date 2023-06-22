@@ -1,4 +1,4 @@
-# University-Projects
+# University Projects
 
 The majority of the projects I was called to implement during my university studies are archived here.
 
