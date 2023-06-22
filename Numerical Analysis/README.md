@@ -15,6 +15,7 @@ Complete the following tasks in C++ or Python:
 4. Given these two matrices A(nxn) = {5 if i=j, -2 if |i-j|=1, 0 otherwise}, B(nx1) = {3, 1, 1, ..., 1, 3},
    perform Gauss, Gauss-Seidel on them and Cholesky on A, after making sure A satisfies the appropriate conditions.
 5. Given the adjacency table found in the header\*, and assuming jump probability q = 0.15:
+
          1. Build the Google matrix and prove it is stochastic
          2. Find the eigenvector of the Google matrix using the power method
          3. Compare the probabilites of the user jumping to page 14 before and after increasing traffic to it by removing
