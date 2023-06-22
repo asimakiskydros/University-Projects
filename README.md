@@ -2,4 +2,6 @@
 
 The majority of the projects I was called to implement during my university studies are archived here.
 
-Note that some of them are missing their original headers as I lost them.
+Notes:
+* I've unfortunately lost some of the original headers.
+* Github blows the percentage of "Jupiter Notebook Language" way out of proportion. My top language should be Python or Java.
