@@ -27,7 +27,7 @@ Use Python to extract useful information about them using the following techniqu
         * If you noticed any worrying clusters on task 3, identify the most likely culprit and try to explain the phenomenon.
     2. Find the 20 rules with the highest Confidence concerning the products, the clusters and the discretized basket value. Mention any new interesting rules.
 
-Original header in greek can be found in this directory, courtesy of Aristotle University of Thessalonica, CSD.
+*Original header in greek can be found in this directory, courtesy of Aristotle University of Thessalonica, CSD.*
 
     
   
