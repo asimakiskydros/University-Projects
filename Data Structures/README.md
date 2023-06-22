@@ -7,7 +7,7 @@ Implement in C++ the following data structures to the best of your abilities:
 * sorted array
 * simple binary search tree
 * avl binary search tree
-* hash table.
+* hash table
 
 Use the data of the given input.txt file\*\* to time these structures against each other,
 based on the time it takes them to insert the above document and search and delete a sample of 1000 words from the
