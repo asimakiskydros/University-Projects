@@ -17,4 +17,4 @@ Weekly homework on the Cryptography course.
     - Given the S-box S, calculate its differential uniformity.
     - Prove that Eve can't successfully attack a CBC-mode block cipher with the same strategy as the ECB-mode non-semantic security game.
  
-*Original headers can be found in the pdfs of this directory, courtesy of Aristotle University of Thessalonica, CSD.*
+*Original headers can be found in the PDFs of this directory, courtesy of Aristotle University of Thessalonica, CSD.*
