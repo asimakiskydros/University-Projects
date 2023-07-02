@@ -1,7 +1,7 @@
 # Complexity Analysis on Integer Multiplication
 
 A presentation I was tasked to do on the Cryptography course, covering the history of Integer multiplication algorithms,
-analyzing their function complexity.
+analyzing their function and complexity.
 
 Algorithms covered here in order of appearance:
 * Rudimentary addition
