@@ -9,7 +9,7 @@ project headers:
     - $gcd(ac, b) = gcd(c, b) \forall c\in\mathbb{Z}$.
     - $gcd(a + b, a - b)\in\{1,2\} \text{ and if } a, b \text{ odd then that it's exactly }2$.
     - $gcd(2^a - 1, 2^b - 1) = 1$.
-    - $gcd(M_p, M_q) = 1, text{ where } p, q \text{ Mersenne primes }(p\not=q)$.
+    - $gcd(M_p, M_q) = 1, \text{ where } p, q \text{ Mersenne primes }(p\not=q)$.
 5. Let $a, b, c \in \mathbb{Z} \text{ and } \delta = a^2 - 4bc^2 \not= 0$. Prove that $gcd(\delta, 4c^2)$ is a perfect square.
 6. Verify experimentally that the inequality $\frac{\sigma(n)}{n} < \frac{e^{\gamma}}{2}ln(ln(n)) + \frac{0.74}{ln(ln(n))}$ holds for all odd integers $< 2^{20}$, where $\gamma$ the Euler constant.
 7. Prove that the given integers are Carmichael numbers and attempt to find a larger one.
