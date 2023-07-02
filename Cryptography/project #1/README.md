@@ -13,4 +13,4 @@ project headers:
 9. Examine whether AES-128 has the avalanche effect. Try both ECB and CBC modes. Use messages 2 blocks in length.
 10. You are given the locked "secure.zip". Open it. (Hint: the Introductory PDF contains everything you need).
 
-*Original headers can be found inside the PDF along with the solutions. Courtesy of Aristotle University of Thessalonica, CSD.*
+*Original headers can be found in the PDF along with the task solutions. Courtesy of Aristotle University of Thessalonica, CSD.*
