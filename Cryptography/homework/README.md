@@ -13,7 +13,7 @@ Weekly homework on the Cryptography course.
     - Suppose LFSR of length 4 with a feedback polynomial of $f(x) = x^4 + x^2 + x + 1$ and seed $(x[3], x[2], x[1], x[0])$. Find the outputs $y[0] - y[8]$ as functions of $x[i]$.
     - Suppose $y[5] = y[8] = 1, y[6] = y[7] = 0$. Find the initial seed without brute force.
 * **Homework 4:**
-    - Calculate the correlation coefficient of $f,g : \mathbb{F}^3_2 \rightarrow \text{\{0, 1\}}, f(x) = x_1x_2 \oplus x_3, g = x_1 \oplus x_3$.
+    - Calculate the correlation coefficient of $f,g : \mathbb{F}^3_2 \rightarrow \{0, 1\}, f(x) = x_1x_2 \oplus x_3, g = x_1 \oplus x_3$.
     - Given the S-box S, calculate its differential uniformity.
     - Prove that Eve can't successfully attack a CBC-mode block cipher with the same strategy as the ECB-mode non-semantic security game.
  
