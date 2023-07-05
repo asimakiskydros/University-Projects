@@ -7,7 +7,7 @@ project headers:
 3. Prove that the inequality $p_n < 2^{2^n}$ holds for the n-th prime $p_n$.
 4. Let $a, b \in \mathbb{N} \ni gcd(a, b) = 1.$ Prove that:
     - $gcd(ac, b) = gcd(c, b) \forall c\in\mathbb{Z}$.
-    - $gcd(a + b, a - b)\in\{1,2\} \text{ and if } a, b \text{ odd then that it's exactly }2$.
+    - $gcd(a + b, a - b)\in\lbrace1,2\rbrace \text{ and if } a, b \text{ odd then that it's exactly }2$.
     - $gcd(2^a - 1, 2^b - 1) = 1$.
     - $gcd(M_p, M_q) = 1, \text{ where } p, q \text{ Mersenne primes }(p\not=q)$.
 5. Let $a, b, c \in \mathbb{Z} \text{ and } \delta = a^2 - 4bc^2 \not= 0$. Prove that $gcd(\delta, 4c^2)$ is a perfect square.
