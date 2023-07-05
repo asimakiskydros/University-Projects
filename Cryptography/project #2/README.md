@@ -6,7 +6,7 @@ project headers:
 2. Implement the modular exponentiation algorithm and use it to find $5^{77}\text{ mod }19$.
 3. Prove that the inequality $p_n < 2^{2^n}$ holds for the n-th prime $p_n$.
 4. Let $a, b \in \mathbb{N} \ni gcd(a, b) = 1.$ Prove that:
-    - $gcd(ac, b) = gcd(c, b) \forall c\in\mathbb{Z}$.
+    - $gcd(ac, b) = gcd(c, b) \text{ }\forall c\in\mathbb{Z}$.
     - $gcd(a + b, a - b)\in\lbrace1,2\rbrace \text{ and if } a, b \text{ odd then that it's exactly }2$.
     - $gcd(2^a - 1, 2^b - 1) = 1$.
     - $gcd(M_p, M_q) = 1, \text{ where } p, q \text{ Mersenne primes }(p\not=q)$.
