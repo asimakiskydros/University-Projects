@@ -1,4 +1,4 @@
-# Data Structures Lab -- C++
+# Data Structures Lab - C++
 
 The lab part of the Data Structures course was essentially dedicated to teaching C++ basics.
 Each of the 7 initial labs had a summation task at the end, and a homework task for next time.
