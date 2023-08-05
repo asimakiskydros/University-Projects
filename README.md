@@ -1,6 +1,6 @@
 # University Projects
 
-The majority of the projects I was called to implement during my university studies are archived here.
+The majority of the projects/assignments I was called to do during my university studies are archived here.
 
 Notes:
 * I've unfortunately lost some of the original headers.
