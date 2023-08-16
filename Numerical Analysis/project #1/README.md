@@ -1,4 +1,4 @@
-# Numerical Analysis Project
+# Numerical Analysis - Project #1
 
 Project header\*:
 
