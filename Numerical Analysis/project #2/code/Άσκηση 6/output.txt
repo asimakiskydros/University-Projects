@@ -1,0 +1,9 @@
+Integral of sin(x) in [0, pi/2]:
+
+   * through the table method: 0.997943
+        (numerical error = 0.00205701)
+        (maximum theoretical error = 0.002669)
+
+   * through Simpson's method: 1.000003
+        (numerical error = 0.000003)
+        (maximum theoretical error = 0.000004)

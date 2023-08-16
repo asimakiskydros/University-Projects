@@ -1,0 +1,195 @@
+Predictions for CENER:
+    ->at 18/1/21:
+        actual: 1.714000
+        power-2 polynomial: 1.740039
+        power-3 polynomial: -2272455213303.125000
+        power-4 polynomial: -323051177329557504.000000
+
+    ->at 19/1/21:
+        actual: 1.714000
+        power-2 polynomial: 1.740044
+        power-3 polynomial: -2517553000677.750000
+        power-4 polynomial: -356920677082595328.000000
+
+    ->at 20/1/21:
+        actual: 1.726000
+        power-2 polynomial: 1.740050
+        power-3 polynomial: -2762708469323.375000
+        power-4 polynomial: -390629835757584384.000000
+
+    ->at 21/1/21:
+        actual: 1.700000
+        power-2 polynomial: 1.740055
+        power-3 polynomial: -3007921620405.250000
+        power-4 polynomial: -424178648648515584.000000
+
+    ->at 22/1/21:
+        actual: 1.690000
+        power-2 polynomial: 1.740060
+        power-3 polynomial: -3253192455088.750000
+        power-4 polynomial: -457567097946374144.000000
+
+    ->at 25/1/21:
+        actual: 1.650000
+        power-2 polynomial: 1.740075
+        power-3 polynomial: -3989351066901.125000
+        power-4 polynomial: -556769211536375808.000000
+
+Predictions of conferences used to build the polynomial (CENER):
+    ->at 14/1/21:
+        actual: 1.710000
+        power-2 polynomial: 1.740019
+        power-3 polynomial: -1292640862531.750000
+        power-4 polynomial: -185971503131525120.000000
+
+    ->at 13/10/2:
+        actual: 1.736000
+        power-2 polynomial: 1.736000
+        power-3 polynomial: 13504352.170410
+        power-4 polynomial: 2509348473856.000000
+
+    ->at 12/1/21:
+        actual: 1.720000
+        power-2 polynomial: 1.740009
+        power-3 polynomial: -803079753541.500000
+        power-4 polynomial: -116471453016129536.000000
+
+    ->at 11/1/21:
+        actual: 1.710000
+        power-2 polynomial: 1.740004
+        power-3 polynomial: -558385712924.125000
+        power-4 polynomial: -81481562230620160.000000
+
+    ->at 8/1/21:
+        actual: 1.768000
+        power-2 polynomial: 1.739989
+        power-3 polynomial: 175350365837.625000
+        power-4 polynomial: 24446805135589376.000000
+
+    ->at 7/1/21:
+        actual: 1.760000
+        power-2 polynomial: 1.739984
+        power-3 polynomial: 419813713671.375000
+        power-4 polynomial: 60075592254488576.000000
+
+    ->at 5/1/21:
+        actual: 1.748000
+        power-2 polynomial: 1.739973
+        power-3 polynomial: 908567397570.625000
+        power-4 polynomial: 131811974127288320.000000
+
+    ->at 4/1/21:
+        actual: 1.764000
+        power-2 polynomial: 1.739968
+        power-3 polynomial: 1152857734545.125000
+        power-4 polynomial: 167919333035474944.000000
+
+    ->at 31/12/20:
+        actual: 1.730000
+        power-2 polynomial: 1.697030
+        power-3 polynomial: 115278176571.250000
+        power-4 polynomial: 372187761416863744.000000
+
+    ->at 30/12/20:
+        actual: 1.664000
+        power-2 polynomial: 1.697025
+        power-3 polynomial: -117774565334.750000
+        power-4 polynomial: -372519710488526848.000000
+
+Predictions for CNLCAP:
+    ->at 18/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.705722
+        power-3 polynomial: 4160803346944.000000
+        power-4 polynomial: 279693287047036928.000000
+
+    ->at 19/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.709238
+        power-3 polynomial: 4536852619776.000000
+        power-4 polynomial: 308910406225625088.000000
+
+    ->at 20/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.712754
+        power-3 polynomial: 4895063779328.000000
+        power-4 polynomial: 337634376772747264.000000
+
+    ->at 21/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.716271
+        power-3 polynomial: 5235426663936.000000
+        power-4 polynomial: 365864873990553600.000000
+
+    ->at 22/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.719789
+        power-3 polynomial: 5557937401344.000000
+        power-4 polynomial: 393601553535074304.000000
+
+    ->at 25/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.730348
+        power-3 polynomial: 6418296644096.000000
+        power-4 polynomial: 473848191100387328.000000
+
+Predictions of conferences used to build the polynomial (CNLCAP):
+    ->at 14/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.691668
+        power-3 polynomial: 2478320867328.000000
+        power-4 polynomial: 157894205945937920.000000
+
+    ->at 13/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.688156
+        power-3 polynomial: 2013163784192.000000
+        power-4 polynomial: 126212939140038656.000000
+
+    ->at 12/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.684646
+        power-3 polynomial: 1530197704704.000000
+        power-4 polynomial: 94039129007849472.000000
+
+    ->at 11/1/21:
+        actual: 8.550000
+        power-2 polynomial: 8.681136
+        power-3 polynomial: 1029433840128.000000
+        power-4 polynomial: 61373173932752896.000000
+
+    ->at 8/1/21:
+        actual: 8.550000
+        power-2 polynomial: 8.670610
+        power-3 polynomial: -579578888704.000000
+        power-4 polynomial: -39575919584608256.000000
+
+    ->at 7/1/21:
+        actual: 8.550000
+        power-2 polynomial: 8.667104
+        power-3 polynomial: -1151474448896.000000
+        power-4 polynomial: -74208918644981760.000000
+
+    ->at 5/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.660092
+        power-3 polynomial: -2348554958336.000000
+        power-4 polynomial: -144948451837214720.000000
+
+    ->at 4/1/21:
+        actual: 8.750000
+        power-2 polynomial: 8.656588
+        power-3 polynomial: -2973734987776.000000
+        power-4 polynomial: -181054967522525184.000000
+
+    ->at 31/12/20:
+        actual: 8.750000
+        power-2 polynomial: 8.748237
+        power-3 polynomial: -40008511705088.000000
+        power-4 polynomial: -1144699195467235328.000000
+
+    ->at 30/12/20:
+        actual: 8.750000
+        power-2 polynomial: 8.751762
+        power-3 polynomial: 40010753565184.000000
+        power-4 polynomial: 1144968267073323008.000000

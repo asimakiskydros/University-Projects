@@ -1,0 +1,1000 @@
+[-3.09841]
+   actual: -0.0431721
+   through lagrange: -0.0430956 (error = 7.64744e-05)
+   through splines: -0.0406993 (error = 0.00247275)
+   through least squares: -0.0700881 (error = 0.026916)
+[-3.08381]
+   actual: -0.0577531
+   through lagrange: -0.0576559 (error = 9.71488e-05)
+   through splines: -0.054448 (error = 0.00330509)
+   through least squares: -0.0950156 (error = 0.0372625)
+[-3.00936]
+   actual: -0.131852
+   through lagrange: -0.131683 (error = 0.000169641)
+   through splines: -0.124368 (error = 0.00748403)
+   through least squares: -0.216598 (error = 0.0847458)
+[-3.00415]
+   actual: -0.137015
+   through lagrange: -0.136842 (error = 0.000172957)
+   through splines: -0.129244 (error = 0.00777069)
+   through least squares: -0.224762 (error = 0.0877478)
+[-3.00209]
+   actual: -0.139053
+   through lagrange: -0.138878 (error = 0.000174212)
+   through splines: -0.131169 (error = 0.00788366)
+   through least squares: -0.227975 (error = 0.0889223)
+[-2.99477]
+   actual: -0.146297
+   through lagrange: -0.146118 (error = 0.000178432)
+   through splines: -0.138012 (error = 0.00828426)
+   through least squares: -0.239346 (error = 0.0930488)
+[-2.9904]
+   actual: -0.150621
+   through lagrange: -0.15044 (error = 0.000180776)
+   through splines: -0.142098 (error = 0.00852265)
+   through least squares: -0.246097 (error = 0.0954761)
+[-2.96485]
+   actual: -0.175819
+   through lagrange: -0.175627 (error = 0.000191993)
+   through splines: -0.165919 (error = 0.00989993)
+   through least squares: -0.284912 (error = 0.109093)
+[-2.92379]
+   actual: -0.216081
+   through lagrange: -0.215879 (error = 0.000202275)
+   through splines: -0.204029 (error = 0.0120519)
+   through least squares: -0.345107 (error = 0.129026)
+[-2.89522]
+   actual: -0.24389
+   through lagrange: -0.243685 (error = 0.000204769)
+   through splines: -0.230393 (error = 0.0134967)
+   through least squares: -0.38541 (error = 0.14152)
+[-2.88436]
+   actual: -0.254405
+   through lagrange: -0.2542 (error = 0.000204872)
+   through splines: -0.240372 (error = 0.014033)
+   through least squares: -0.400385 (error = 0.14598)
+[-2.81697]
+   actual: -0.318955
+   through lagrange: -0.318757 (error = 0.00019734)
+   through splines: -0.30177 (error = 0.0171851)
+   through least squares: -0.489217 (error = 0.170262)
+[-2.77153]
+   actual: -0.361675
+   through lagrange: -0.361488 (error = 0.000186425)
+   through splines: -0.342559 (error = 0.0191159)
+   through least squares: -0.545162 (error = 0.183487)
+[-2.76796]
+   actual: -0.364998
+   through lagrange: -0.364813 (error = 0.000185428)
+   through splines: -0.345738 (error = 0.0192602)
+   through least squares: -0.549421 (error = 0.184423)
+[-2.7675]
+   actual: -0.36543
+   through lagrange: -0.365244 (error = 0.000185297)
+   through splines: -0.346151 (error = 0.0192789)
+   through least squares: -0.549973 (error = 0.184544)
+[-2.76369]
+   actual: -0.368971
+   through lagrange: -0.368786 (error = 0.000184211)
+   through splines: -0.349539 (error = 0.0194315)
+   through least squares: -0.554495 (error = 0.185524)
+[-2.75879]
+   actual: -0.373522
+   through lagrange: -0.373339 (error = 0.000182785)
+   through splines: -0.353896 (error = 0.0196261)
+   through least squares: -0.560285 (error = 0.186763)
+[-2.74707]
+   actual: -0.384368
+   through lagrange: -0.384188 (error = 0.00017926)
+   through splines: -0.364285 (error = 0.0200827)
+   through least squares: -0.573983 (error = 0.189615)
+[-2.72341]
+   actual: -0.406103
+   through lagrange: -0.405931 (error = 0.000171714)
+   through splines: -0.385136 (error = 0.0209664)
+   through least squares: -0.601012 (error = 0.194909)
+[-2.72131]
+   actual: -0.408015
+   through lagrange: -0.407844 (error = 0.000171023)
+   through splines: -0.386973 (error = 0.021042)
+   through least squares: -0.603363 (error = 0.195348)
+[-2.62138]
+   actual: -0.497066
+   through lagrange: -0.49693 (error = 0.000135665)
+   through splines: -0.472924 (error = 0.0241418)
+   through least squares: -0.708131 (error = 0.211065)
+[-2.58761]
+   actual: -0.526078
+   through lagrange: -0.525954 (error = 0.00012348)
+   through splines: -0.50113 (error = 0.0249479)
+   through least squares: -0.740279 (error = 0.214201)
+[-2.54368]
+   actual: -0.56292
+   through lagrange: -0.562812 (error = 0.000108045)
+   through splines: -0.537118 (error = 0.0258019)
+   through least squares: -0.7797 (error = 0.21678)
+[-2.51802]
+   actual: -0.58394
+   through lagrange: -0.58384 (error = 9.93745e-05)
+   through splines: -0.557744 (error = 0.0261959)
+   through least squares: -0.801484 (error = 0.217544)
+[-2.50609]
+   actual: -0.593582
+   through lagrange: -0.593486 (error = 9.54497e-05)
+   through splines: -0.567229 (error = 0.0263523)
+   through least squares: -0.811302 (error = 0.217721)
+[-2.48658]
+   actual: -0.609168
+   through lagrange: -0.609079 (error = 8.91905e-05)
+   through splines: -0.582597 (error = 0.026571)
+   through least squares: -0.826942 (error = 0.217774)
+[-2.45812]
+   actual: -0.63149
+   through lagrange: -0.63141 (error = 8.0442e-05)
+   through splines: -0.604683 (error = 0.0268069)
+   through least squares: -0.848835 (error = 0.217345)
+[-2.44455]
+   actual: -0.641954
+   through lagrange: -0.641877 (error = 7.64406e-05)
+   through splines: -0.61507 (error = 0.0268844)
+   through least squares: -0.85889 (error = 0.216936)
+[-2.36166]
+   actual: -0.703233
+   through lagrange: -0.703178 (error = 5.45403e-05)
+   through splines: -0.676368 (error = 0.0268643)
+   through least squares: -0.915034 (error = 0.211801)
+[-2.35749]
+   actual: -0.70619
+   through lagrange: -0.706137 (error = 5.35572e-05)
+   through splines: -0.679349 (error = 0.0268409)
+   through least squares: -0.917621 (error = 0.211431)
+[-2.3543]
+   actual: -0.708445
+   through lagrange: -0.708392 (error = 5.28126e-05)
+   through splines: -0.681623 (error = 0.0268216)
+   through least squares: -0.919586 (error = 0.211141)
+[-2.29746]
+   actual: -0.747392
+   through lagrange: -0.747352 (error = 4.06542e-05)
+   through splines: -0.721123 (error = 0.0262696)
+   through least squares: -0.952422 (error = 0.205029)
+[-2.29386]
+   actual: -0.749779
+   through lagrange: -0.749739 (error = 3.99538e-05)
+   through splines: -0.723558 (error = 0.0262216)
+   through least squares: -0.954364 (error = 0.204585)
+[-2.21149]
+   actual: -0.801681
+   through lagrange: -0.801655 (error = 2.60824e-05)
+   through splines: -0.776971 (error = 0.02471)
+   through least squares: -0.994436 (error = 0.192756)
+[-2.15119]
+   actual: -0.836245
+   through lagrange: -0.836227 (error = 1.83474e-05)
+   through splines: -0.813116 (error = 0.0231294)
+   through least squares: -1.01857 (error = 0.182323)
+[-2.10605]
+   actual: -0.860137
+   through lagrange: -0.860123 (error = 1.37317e-05)
+   through splines: -0.838429 (error = 0.0217083)
+   through least squares: -1.03384 (error = 0.173699)
+[-2.09131]
+   actual: -0.867562
+   through lagrange: -0.867549 (error = 1.24213e-05)
+   through splines: -0.846358 (error = 0.0212038)
+   through least squares: -1.03831 (error = 0.170752)
+[-2.08696]
+   actual: -0.869719
+   through lagrange: -0.869707 (error = 1.20517e-05)
+   through splines: -0.848668 (error = 0.0210511)
+   through least squares: -1.03959 (error = 0.169869)
+[-2.05153]
+   actual: -0.886656
+   through lagrange: -0.886647 (error = 9.32482e-06)
+   through splines: -0.866905 (error = 0.0197511)
+   through least squares: -1.04917 (error = 0.16251)
+[-2.04509]
+   actual: -0.889615
+   through lagrange: -0.889606 (error = 8.88054e-06)
+   through splines: -0.870111 (error = 0.0195043)
+   through least squares: -1.05075 (error = 0.16114)
+[-2.04093]
+   actual: -0.891507
+   through lagrange: -0.891498 (error = 8.60151e-06)
+   through splines: -0.872164 (error = 0.0193433)
+   through least squares: -1.05176 (error = 0.16025)
+[-2.02292]
+   actual: -0.89952
+   through lagrange: -0.899513 (error = 7.46318e-06)
+   through splines: -0.880889 (error = 0.0186318)
+   through least squares: -1.05587 (error = 0.156353)
+[-1.97078]
+   actual: -0.921069
+   through lagrange: -0.921064 (error = 4.75636e-06)
+   through splines: -0.904613 (error = 0.0164558)
+   through least squares: -1.06579 (error = 0.14472)
+[-1.90989]
+   actual: -0.943055
+   through lagrange: -0.943052 (error = 2.53933e-06)
+   through splines: -0.929306 (error = 0.0137487)
+   through least squares: -1.07367 (error = 0.13062)
+[-1.89437]
+   actual: -0.948106
+   through lagrange: -0.948104 (error = 2.11025e-06)
+   through splines: -0.935067 (error = 0.013039)
+   through least squares: -1.07506 (error = 0.126958)
+[-1.84792]
+   actual: -0.961848
+   through lagrange: -0.961847 (error = 1.10201e-06)
+   through splines: -0.950954 (error = 0.0108938)
+   through least squares: -1.07774 (error = 0.115894)
+[-1.83821]
+   actual: -0.964456
+   through lagrange: -0.964456 (error = 9.37871e-07)
+   through splines: -0.954012 (error = 0.0104445)
+   through least squares: -1.07802 (error = 0.113568)
+[-1.74063]
+   actual: -0.985613
+   through lagrange: -0.985613 (error = 2.92874e-08)
+   through splines: -0.979582 (error = 0.00603118)
+   through least squares: -1.07571 (error = 0.0900988)
+[-1.73859]
+   actual: -0.985955
+   through lagrange: -0.985955 (error = 3.87453e-08)
+   through splines: -0.980012 (error = 0.00594322)
+   through least squares: -1.07557 (error = 0.0896112)
+[-1.68636]
+   actual: -0.993331
+   through lagrange: -0.993331 (error = 1.75093e-07)
+   through splines: -0.989551 (error = 0.00377973)
+   through least squares: -1.07049 (error = 0.0771546)
+[-1.67994]
+   actual: -0.99405
+   through lagrange: -0.99405 (error = 1.7964e-07)
+   through splines: -0.990521 (error = 0.00352901)
+   through least squares: -1.06969 (error = 0.0756361)
+[-1.56759]
+   actual: -0.999995
+   through lagrange: -0.999995 (error = 1.00919e-08)
+   through splines: -1.00007 (error = 7.76955e-05)
+   through least squares: -1.04973 (error = 0.0497322)
+[-1.52141]
+   actual: -0.998781
+   through lagrange: -0.998781 (error = 1.69169e-07)
+   through splines: -0.999798 (error = 0.00101742)
+   through least squares: -1.03835 (error = 0.0395707)
+[-1.50026]
+   actual: -0.997513
+   through lagrange: -0.997513 (error = 2.4684e-07)
+   through splines: -0.998858 (error = 0.00134427)
+   through least squares: -1.03255 (error = 0.0350353)
+[-1.48211]
+   actual: -0.99607
+   through lagrange: -0.996069 (error = 3.1404e-07)
+   through splines: -0.997648 (error = 0.00157854)
+   through least squares: -1.02728 (error = 0.0312061)
+[-1.45363]
+   actual: -0.993144
+   through lagrange: -0.993144 (error = 4.18152e-07)
+   through splines: -0.995012 (error = 0.00186757)
+   through least squares: -1.01847 (error = 0.0253268)
+[-1.43895]
+   actual: -0.991321
+   through lagrange: -0.991321 (error = 4.7039e-07)
+   through splines: -0.993304 (error = 0.00198241)
+   through least squares: -1.01368 (error = 0.0223587)
+[-1.42987]
+   actual: -0.990087
+   through lagrange: -0.990086 (error = 5.02005e-07)
+   through splines: -0.99213 (error = 0.0020427)
+   through least squares: -1.01063 (error = 0.0205452)
+[-1.42607]
+   actual: -0.989545
+   through lagrange: -0.989545 (error = 5.1507e-07)
+   through splines: -0.991611 (error = 0.00206563)
+   through least squares: -1.00934 (error = 0.0197905)
+[-1.41775]
+   actual: -0.988312
+   through lagrange: -0.988311 (error = 5.4324e-07)
+   through splines: -0.990423 (error = 0.00211111)
+   through least squares: -1.00646 (error = 0.0181511)
+[-1.38936]
+   actual: -0.983586
+   through lagrange: -0.983585 (error = 6.34703e-07)
+   through splines: -0.985807 (error = 0.00222153)
+   through least squares: -0.996255 (error = 0.0126697)
+[-1.33119]
+   actual: -0.971431
+   through lagrange: -0.97143 (error = 7.94965e-07)
+   through splines: -0.973695 (error = 0.00226461)
+   through least squares: -0.973448 (error = 0.00201742)
+[-1.31884]
+   actual: -0.968427
+   through lagrange: -0.968426 (error = 8.23737e-07)
+   through splines: -0.970675 (error = 0.00224775)
+   through least squares: -0.968289 (error = 0.000138094)
+[-1.3184]
+   actual: -0.968317
+   through lagrange: -0.968317 (error = 8.24726e-07)
+   through splines: -0.970564 (error = 0.002247)
+   through least squares: -0.968103 (error = 0.000214194)
+[-1.26668]
+   actual: -0.954111
+   through lagrange: -0.95411 (error = 9.23997e-07)
+   through splines: -0.956211 (error = 0.00210055)
+   through least squares: -0.945291 (error = 0.00881931)
+[-1.23455]
+   actual: -0.944001
+   through lagrange: -0.944 (error = 9.68713e-07)
+   through splines: -0.945963 (error = 0.00196276)
+   through least squares: -0.930191 (error = 0.0138099)
+[-1.17565]
+   actual: -0.922942
+   through lagrange: -0.922941 (error = 1.01911e-06)
+   through splines: -0.924595 (error = 0.00165297)
+   through least squares: -0.900714 (error = 0.0222276)
+[-1.16819]
+   actual: -0.920042
+   through lagrange: -0.920041 (error = 1.02279e-06)
+   through splines: -0.921652 (error = 0.00161043)
+   through least squares: -0.896816 (error = 0.0232254)
+[-1.14427]
+   actual: -0.910409
+   through lagrange: -0.910407 (error = 1.03085e-06)
+   through splines: -0.91188 (error = 0.00147169)
+   through least squares: -0.884094 (error = 0.0263148)
+[-1.12104]
+   actual: -0.900553
+   through lagrange: -0.900552 (error = 1.03359e-06)
+   through splines: -0.901888 (error = 0.00133523)
+   through least squares: -0.871395 (error = 0.0291583)
+[-1.10092]
+   actual: -0.891624
+   through lagrange: -0.891623 (error = 1.03225e-06)
+   through splines: -0.892842 (error = 0.00121741)
+   through least squares: -0.860129 (error = 0.0314947)
+[-1.09613]
+   actual: -0.889444
+   through lagrange: -0.889443 (error = 1.03147e-06)
+   through splines: -0.890633 (error = 0.00118955)
+   through least squares: -0.85741 (error = 0.0320338)
+[-1.05311]
+   actual: -0.868966
+   through lagrange: -0.868965 (error = 1.01717e-06)
+   through splines: -0.869912 (error = 0.000946214)
+   through least squares: -0.832395 (error = 0.036571)
+[-1.00369]
+   actual: -0.843461
+   through lagrange: -0.84346 (error = 9.87483e-07)
+   through splines: -0.844151 (error = 0.000690068)
+   through least squares: -0.802352 (error = 0.041108)
+[-0.992441]
+   actual: -0.837363
+   through lagrange: -0.837362 (error = 9.79165e-07)
+   through splines: -0.837999 (error = 0.000636299)
+   through least squares: -0.795323 (error = 0.0420398)
+[-0.97869]
+   actual: -0.829767
+   through lagrange: -0.829766 (error = 9.68359e-07)
+   through splines: -0.83034 (error = 0.000573158)
+   through least squares: -0.78664 (error = 0.0431275)
+[-0.973235]
+   actual: -0.82671
+   through lagrange: -0.826709 (error = 9.63893e-07)
+   through splines: -0.827259 (error = 0.000548914)
+   through least squares: -0.783166 (error = 0.0435435)
+[-0.972263]
+   actual: -0.826163
+   through lagrange: -0.826162 (error = 9.63088e-07)
+   through splines: -0.826707 (error = 0.000544644)
+   through least squares: -0.782546 (error = 0.0436167)
+[-0.929886]
+   actual: -0.801552
+   through lagrange: -0.801551 (error = 9.25491e-07)
+   through splines: -0.801925 (error = 0.000373344)
+   through least squares: -0.755017 (error = 0.0465352)
+[-0.911552]
+   actual: -0.790455
+   through lagrange: -0.790454 (error = 9.0804e-07)
+   through splines: -0.790764 (error = 0.000308407)
+   through least squares: -0.742822 (error = 0.0476334)
+[-0.864372]
+   actual: -0.760687
+   through lagrange: -0.760687 (error = 8.61216e-07)
+   through splines: -0.760854 (error = 0.000166402)
+   through least squares: -0.710682 (error = 0.0500058)
+[-0.838835]
+   actual: -0.743865
+   through lagrange: -0.743864 (error = 8.353e-07)
+   through splines: -0.743969 (error = 0.000103687)
+   through least squares: -0.692846 (error = 0.0510198)
+[-0.802691]
+   actual: -0.719228
+   through lagrange: -0.719228 (error = 7.98599e-07)
+   through splines: -0.719258 (error = 2.95809e-05)
+   through least squares: -0.667093 (error = 0.0521354)
+[-0.796891]
+   actual: -0.715187
+   through lagrange: -0.715186 (error = 7.92744e-07)
+   through splines: -0.715206 (error = 1.90745e-05)
+   through least squares: -0.662907 (error = 0.0522799)
+[-0.738063]
+   actual: -0.672856
+   through lagrange: -0.672856 (error = 7.34473e-07)
+   through splines: -0.672787 (error = 6.93488e-05)
+   through least squares: -0.61964 (error = 0.053216)
+[-0.728345]
+   actual: -0.665635
+   through lagrange: -0.665635 (error = 7.25096e-07)
+   through splines: -0.665555 (error = 8.05403e-05)
+   through least squares: -0.612356 (error = 0.0532792)
+[-0.719588]
+   actual: -0.659075
+   through lagrange: -0.659074 (error = 7.16715e-07)
+   through splines: -0.658985 (error = 8.97246e-05)
+   through least squares: -0.60576 (error = 0.0533145)
+[-0.711015]
+   actual: -0.652603
+   through lagrange: -0.652602 (error = 7.08575e-07)
+   through splines: -0.652505 (error = 9.78753e-05)
+   through least squares: -0.599274 (error = 0.0533291)
+[-0.630063]
+   actual: -0.589196
+   through lagrange: -0.589195 (error = 6.34853e-07)
+   through splines: -0.589062 (error = 0.000133507)
+   through least squares: -0.536672 (error = 0.0525239)
+[-0.624359]
+   actual: -0.584577
+   through lagrange: -0.584577 (error = 6.29857e-07)
+   through splines: -0.584444 (error = 0.000133305)
+   through least squares: -0.532173 (error = 0.0524047)
+[-0.619864]
+   actual: -0.580924
+   through lagrange: -0.580924 (error = 6.25935e-07)
+   through splines: -0.580791 (error = 0.000132915)
+   through least squares: -0.528619 (error = 0.0523051)
+[-0.493807]
+   actual: -0.473981
+   through lagrange: -0.473981 (error = 5.19367e-07)
+   through splines: -0.47392 (error = 6.13769e-05)
+   through least squares: -0.426379 (error = 0.0476027)
+[-0.410267]
+   actual: -0.398854
+   through lagrange: -0.398853 (error = 4.47944e-07)
+   through splines: -0.398849 (error = 5.23303e-06)
+   through least squares: -0.356205 (error = 0.0426492)
+[-0.395012]
+   actual: -0.384819
+   through lagrange: -0.384819 (error = 4.34431e-07)
+   through splines: -0.384819 (error = 8.4256e-07)
+   through least squares: -0.343214 (error = 0.0416059)
+[-0.390715]
+   actual: -0.380849
+   through lagrange: -0.380849 (error = 4.30589e-07)
+   through splines: -0.380849 (error = 1.38002e-07)
+   through least squares: -0.339545 (error = 0.0413047)
+[-0.388806]
+   actual: -0.379083
+   through lagrange: -0.379083 (error = 4.28877e-07)
+   through splines: -0.379084 (error = 9.56382e-08)
+   through least squares: -0.337914 (error = 0.0411699)
+[-0.359848]
+   actual: -0.352132
+   through lagrange: -0.352131 (error = 4.02491e-07)
+   through splines: -0.35213 (error = 1.71528e-06)
+   through least squares: -0.31308 (error = 0.039052)
+[-0.332479]
+   actual: -0.326387
+   through lagrange: -0.326387 (error = 3.76764e-07)
+   through splines: -0.326376 (error = 1.08854e-05)
+   through least squares: -0.289458 (error = 0.0369293)
+[-0.327674]
+   actual: -0.321842
+   through lagrange: -0.321841 (error = 3.72162e-07)
+   through splines: -0.321829 (error = 1.30649e-05)
+   through least squares: -0.285297 (error = 0.0365451)
+[-0.314097]
+   actual: -0.308958
+   through lagrange: -0.308957 (error = 3.59014e-07)
+   through splines: -0.308938 (error = 1.99402e-05)
+   through least squares: -0.273516 (error = 0.0354417)
+[-0.296033]
+   actual: -0.291728
+   through lagrange: -0.291728 (error = 3.41186e-07)
+   through splines: -0.291698 (error = 3.03746e-05)
+   through least squares: -0.257794 (error = 0.0339342)
+[-0.234394]
+   actual: -0.232254
+   through lagrange: -0.232253 (error = 2.77352e-07)
+   through splines: -0.232184 (error = 6.98272e-05)
+   through least squares: -0.203771 (error = 0.0284828)
+[-0.216064]
+   actual: -0.214387
+   through lagrange: -0.214386 (error = 2.57473e-07)
+   through splines: -0.214306 (error = 8.06276e-05)
+   through least squares: -0.187607 (error = 0.0267799)
+[-0.186255]
+   actual: -0.18518
+   through lagrange: -0.18518 (error = 2.24305e-07)
+   through splines: -0.185085 (error = 9.52057e-05)
+   through least squares: -0.161238 (error = 0.023942)
+[-0.113167]
+   actual: -0.112925
+   through lagrange: -0.112925 (error = 1.39059e-07)
+   through splines: -0.112821 (error = 0.000104748)
+   through least squares: -0.0962355 (error = 0.0166897)
+[-0.107311]
+   actual: -0.107105
+   through lagrange: -0.107105 (error = 1.32025e-07)
+   through splines: -0.107002 (error = 0.000103365)
+   through least squares: -0.0910109 (error = 0.0160944)
+[-0.0941255]
+   actual: -0.0939866
+   through lagrange: -0.0939865 (error = 1.16096e-07)
+   through splines: -0.0938877 (error = 9.88555e-05)
+   through least squares: -0.079239 (error = 0.0147476)
+[-0.0279152]
+   actual: -0.0279115
+   through lagrange: -0.0279115 (error = 3.4701e-08)
+   through splines: -0.0278687 (error = 4.28264e-05)
+   through least squares: -0.0200202 (error = 0.00789132)
+[0.00902408]
+   actual: 0.00902396
+   through lagrange: 0.00902395 (error = 1.12254e-08)
+   through splines: 0.0090074 (error = 1.65606e-05)
+   through least squares: 0.0130557 (error = 0.00403176)
+[0.0252289]
+   actual: 0.0252262
+   through lagrange: 0.0252262 (error = 3.13661e-08)
+   through splines: 0.0251767 (error = 4.94655e-05)
+   through least squares: 0.0275648 (error = 0.00233863)
+[0.0747026]
+   actual: 0.0746331
+   through lagrange: 0.074633 (error = 9.24302e-08)
+   through splines: 0.0744625 (error = 0.000170676)
+   through least squares: 0.0718278 (error = 0.00280529)
+[0.102412]
+   actual: 0.102233
+   through lagrange: 0.102233 (error = 1.2612e-07)
+   through splines: 0.101984 (error = 0.000248624)
+   through least squares: 0.0965781 (error = 0.00565456)
+[0.191698]
+   actual: 0.190526
+   through lagrange: 0.190526 (error = 2.30436e-07)
+   through splines: 0.190007 (error = 0.000518674)
+   through least squares: 0.175975 (error = 0.0145506)
+[0.193707]
+   actual: 0.192498
+   through lagrange: 0.192498 (error = 2.32691e-07)
+   through splines: 0.191973 (error = 0.00052472)
+   through least squares: 0.177754 (error = 0.0147441)
+[0.197401]
+   actual: 0.196122
+   through lagrange: 0.196121 (error = 2.36826e-07)
+   through splines: 0.195586 (error = 0.000535802)
+   through least squares: 0.181023 (error = 0.0150991)
+[0.2358]
+   actual: 0.23362
+   through lagrange: 0.23362 (error = 2.78859e-07)
+   through splines: 0.232973 (error = 0.000647249)
+   through least squares: 0.214906 (error = 0.0187141)
+[0.244771]
+   actual: 0.242334
+   through lagrange: 0.242334 (error = 2.88425e-07)
+   through splines: 0.241662 (error = 0.000671992)
+   through least squares: 0.222797 (error = 0.0195375)
+[0.27201]
+   actual: 0.268668
+   through lagrange: 0.268668 (error = 3.16863e-07)
+   through splines: 0.267925 (error = 0.000743107)
+   through least squares: 0.246685 (error = 0.0219831)
+[0.273108]
+   actual: 0.269725
+   through lagrange: 0.269725 (error = 3.17989e-07)
+   through splines: 0.268979 (error = 0.000745831)
+   through least squares: 0.247645 (error = 0.0220798)
+[0.318282]
+   actual: 0.312935
+   through lagrange: 0.312935 (error = 3.63089e-07)
+   through splines: 0.312088 (error = 0.000846639)
+   through least squares: 0.287005 (error = 0.0259299)
+[0.417962]
+   actual: 0.405899
+   through lagrange: 0.405898 (error = 4.54691e-07)
+   through splines: 0.404928 (error = 0.000970367)
+   through least squares: 0.372524 (error = 0.0333747)
+[0.418858]
+   actual: 0.406717
+   through lagrange: 0.406717 (error = 4.55473e-07)
+   through splines: 0.405747 (error = 0.000970763)
+   through least squares: 0.373283 (error = 0.0334342)
+[0.457781]
+   actual: 0.441958
+   through lagrange: 0.441958 (error = 4.88981e-07)
+   through splines: 0.440984 (error = 0.000974538)
+   through least squares: 0.40608 (error = 0.0358782)
+[0.460747]
+   actual: 0.444617
+   through lagrange: 0.444617 (error = 4.91501e-07)
+   through splines: 0.443643 (error = 0.00097374)
+   through least squares: 0.408564 (error = 0.0360528)
+[0.484992]
+   actual: 0.466201
+   through lagrange: 0.4662 (error = 5.11969e-07)
+   through splines: 0.465239 (error = 0.000961392)
+   through least squares: 0.428785 (error = 0.0374159)
+[0.586711]
+   actual: 0.553625
+   through lagrange: 0.553625 (error = 5.97394e-07)
+   through splines: 0.552826 (error = 0.00079978)
+   through least squares: 0.51183 (error = 0.0417949)
+[0.609762]
+   actual: 0.572672
+   through lagrange: 0.572672 (error = 6.1717e-07)
+   through splines: 0.571932 (error = 0.000740707)
+   through least squares: 0.530208 (error = 0.042464)
+[0.613543]
+   actual: 0.575768
+   through lagrange: 0.575767 (error = 6.20443e-07)
+   through splines: 0.575037 (error = 0.000730336)
+   through least squares: 0.533206 (error = 0.0425617)
+[0.655166]
+   actual: 0.609291
+   through lagrange: 0.60929 (error = 6.5713e-07)
+   through splines: 0.608686 (error = 0.000605068)
+   through least squares: 0.565884 (error = 0.0434073)
+[0.666692]
+   actual: 0.61839
+   through lagrange: 0.618389 (error = 6.67526e-07)
+   through splines: 0.617823 (error = 0.000567285)
+   through least squares: 0.574825 (error = 0.0435653)
+[0.673391]
+   actual: 0.62364
+   through lagrange: 0.62364 (error = 6.7362e-07)
+   through splines: 0.623096 (error = 0.000544825)
+   through least squares: 0.579999 (error = 0.0436417)
+[0.701034]
+   actual: 0.645008
+   through lagrange: 0.645008 (error = 6.9918e-07)
+   through splines: 0.644559 (error = 0.000449046)
+   through least squares: 0.601173 (error = 0.0438349)
+[0.710346]
+   actual: 0.652096
+   through lagrange: 0.652095 (error = 7.07942e-07)
+   through splines: 0.65168 (error = 0.000415954)
+   through least squares: 0.608241 (error = 0.0438552)
+[0.746516]
+   actual: 0.679085
+   through lagrange: 0.679085 (error = 7.42693e-07)
+   through splines: 0.678799 (error = 0.000286074)
+   through least squares: 0.63537 (error = 0.0437156)
+[0.753468]
+   actual: 0.684172
+   through lagrange: 0.684171 (error = 7.49496e-07)
+   through splines: 0.683911 (error = 0.000261245)
+   through least squares: 0.640523 (error = 0.0436484)
+[0.801397]
+   actual: 0.718329
+   through lagrange: 0.718328 (error = 7.97291e-07)
+   through splines: 0.718231 (error = 9.76336e-05)
+   through least squares: 0.675505 (error = 0.0428241)
+[0.897297]
+   actual: 0.781644
+   through lagrange: 0.781643 (error = 8.94127e-07)
+   through splines: 0.781767 (error = 0.000122831)
+   through least squares: 0.742416 (error = 0.0392282)
+[0.933164]
+   actual: 0.803508
+   through lagrange: 0.803507 (error = 9.28548e-07)
+   through splines: 0.803644 (error = 0.000136387)
+   through least squares: 0.766308 (error = 0.0371997)
+[0.941075]
+   actual: 0.808192
+   through lagrange: 0.808191 (error = 9.35835e-07)
+   through splines: 0.808324 (error = 0.000132202)
+   through least squares: 0.77149 (error = 0.0367015)
+[0.966235]
+   actual: 0.822752
+   through lagrange: 0.822751 (error = 9.58029e-07)
+   through splines: 0.822851 (error = 9.88227e-05)
+   through least squares: 0.787757 (error = 0.0349948)
+[0.991725]
+   actual: 0.836971
+   through lagrange: 0.83697 (error = 9.78618e-07)
+   through splines: 0.837001 (error = 2.98942e-05)
+   through least squares: 0.803896 (error = 0.0330755)
+[0.994496]
+   actual: 0.838485
+   through lagrange: 0.838484 (error = 9.80721e-07)
+   through splines: 0.838505 (error = 2.00414e-05)
+   through least squares: 0.805629 (error = 0.0328552)
+[1.05895]
+   actual: 0.871842
+   through lagrange: 0.871841 (error = 1.01982e-06)
+   through splines: 0.873087 (error = 0.00124506)
+   through least squares: 0.844747 (error = 0.0270945)
+[1.0699]
+   actual: 0.877153
+   through lagrange: 0.877152 (error = 1.02421e-06)
+   through splines: 0.87846 (error = 0.00130782)
+   through least squares: 0.851158 (error = 0.0259944)
+[1.08146]
+   actual: 0.882645
+   through lagrange: 0.882644 (error = 1.028e-06)
+   through splines: 0.884019 (error = 0.00137454)
+   through least squares: 0.85785 (error = 0.024795)
+[1.10261]
+   actual: 0.892389
+   through lagrange: 0.892388 (error = 1.03249e-06)
+   through splines: 0.893887 (error = 0.00149732)
+   through least squares: 0.86989 (error = 0.0224993)
+[1.12391]
+   actual: 0.901797
+   through lagrange: 0.901796 (error = 1.03351e-06)
+   through splines: 0.903417 (error = 0.00162077)
+   through least squares: 0.88174 (error = 0.020057)
+[1.13208]
+   actual: 0.905297
+   through lagrange: 0.905296 (error = 1.03289e-06)
+   through splines: 0.906965 (error = 0.0016678)
+   through least squares: 0.886212 (error = 0.0190853)
+[1.23576]
+   actual: 0.944397
+   through lagrange: 0.944396 (error = 9.67267e-07)
+   through splines: 0.9466 (error = 0.00220293)
+   through least squares: 0.939278 (error = 0.00511844)
+[1.32171]
+   actual: 0.969137
+   through lagrange: 0.969136 (error = 8.17233e-07)
+   through splines: 0.971574 (error = 0.00243722)
+   through least squares: 0.977798 (error = 0.00866074)
+[1.34121]
+   actual: 0.973761
+   through lagrange: 0.97376 (error = 7.70207e-07)
+   through splines: 0.976205 (error = 0.00244393)
+   through least squares: 0.98581 (error = 0.0120486)
+[1.39178]
+   actual: 0.984019
+   through lagrange: 0.984019 (error = 6.27217e-07)
+   through splines: 0.986369 (error = 0.0023498)
+   through least squares: 1.00527 (error = 0.0212525)
+[1.48574]
+   actual: 0.996384
+   through lagrange: 0.996384 (error = 3.00622e-07)
+   through splines: 0.997983 (error = 0.00159804)
+   through least squares: 1.03622 (error = 0.0398343)
+[1.48704]
+   actual: 0.996494
+   through lagrange: 0.996494 (error = 2.95797e-07)
+   through splines: 0.998075 (error = 0.00158099)
+   through least squares: 1.0366 (error = 0.0401044)
+[1.52642]
+   actual: 0.999016
+   through lagrange: 0.999015 (error = 1.51038e-07)
+   through splines: 0.999979 (error = 0.000963155)
+   through least squares: 1.04742 (error = 0.0484082)
+[1.52679]
+   actual: 0.999032
+   through lagrange: 0.999032 (error = 1.49705e-07)
+   through splines: 0.999988 (error = 0.000956356)
+   through least squares: 1.04752 (error = 0.0484875)
+[1.59908]
+   actual: 0.9996
+   through lagrange: 0.9996 (error = 8.09744e-08)
+   through splines: 0.998822 (error = 0.000777933)
+   through least squares: 1.06398 (error = 0.0643786)
+[1.62668]
+   actual: 0.998439
+   through lagrange: 0.998439 (error = 1.41434e-07)
+   through splines: 0.996788 (error = 0.00165091)
+   through least squares: 1.06907 (error = 0.070633)
+[1.68207]
+   actual: 0.993816
+   through lagrange: 0.993816 (error = 1.78384e-07)
+   through splines: 0.990134 (error = 0.00368159)
+   through least squares: 1.07724 (error = 0.0834213)
+[1.71601]
+   actual: 0.989476
+   through lagrange: 0.989476 (error = 1.2144e-07)
+   through splines: 0.984405 (error = 0.00507112)
+   through least squares: 1.08085 (error = 0.0913782)
+[1.779]
+   actual: 0.978404
+   through lagrange: 0.978404 (error = 2.21114e-07)
+   through splines: 0.970556 (error = 0.00784786)
+   through least squares: 1.08469 (error = 0.106287)
+[1.79592]
+   actual: 0.974767
+   through lagrange: 0.974766 (error = 3.80525e-07)
+   through splines: 0.966144 (error = 0.00862281)
+   through least squares: 1.08507 (error = 0.110305)
+[1.83067]
+   actual: 0.966422
+   through lagrange: 0.966422 (error = 8.20177e-07)
+   through splines: 0.956188 (error = 0.0102345)
+   through least squares: 1.08497 (error = 0.118546)
+[1.85686]
+   actual: 0.959363
+   through lagrange: 0.959362 (error = 1.26663e-06)
+   through splines: 0.947906 (error = 0.0114567)
+   through least squares: 1.08409 (error = 0.124731)
+[1.85743]
+   actual: 0.959201
+   through lagrange: 0.9592 (error = 1.27765e-06)
+   through splines: 0.947717 (error = 0.0114834)
+   through least squares: 1.08407 (error = 0.124866)
+[1.86361]
+   actual: 0.957435
+   through lagrange: 0.957433 (error = 1.39986e-06)
+   through splines: 0.945663 (error = 0.0117718)
+   through least squares: 1.08376 (error = 0.126321)
+[1.88222]
+   actual: 0.951897
+   through lagrange: 0.951895 (error = 1.80856e-06)
+   through splines: 0.939259 (error = 0.0126378)
+   through least squares: 1.08258 (error = 0.130687)
+[1.94035]
+   actual: 0.93249
+   through lagrange: 0.932487 (error = 3.53465e-06)
+   through splines: 0.917195 (error = 0.0152948)
+   through least squares: 1.07662 (error = 0.144128)
+[1.94363]
+   actual: 0.931298
+   through lagrange: 0.931295 (error = 3.65512e-06)
+   through splines: 0.915857 (error = 0.0154418)
+   through least squares: 1.07618 (error = 0.144877)
+[1.95562]
+   actual: 0.926863
+   through lagrange: 0.926859 (error = 4.11783e-06)
+   through splines: 0.910889 (error = 0.0159742)
+   through least squares: 1.07446 (error = 0.147597)
+[2.00242]
+   actual: 0.908287
+   through lagrange: 0.908281 (error = 6.29928e-06)
+   through splines: 0.890303 (error = 0.0179843)
+   through least squares: 1.06629 (error = 0.158005)
+[2.03027]
+   actual: 0.896284
+   through lagrange: 0.896276 (error = 7.91434e-06)
+   through splines: 0.877165 (error = 0.0191189)
+   through least squares: 1.0603 (error = 0.164014)
+[2.05682]
+   actual: 0.884198
+   through lagrange: 0.884188 (error = 9.70127e-06)
+   through splines: 0.864048 (error = 0.0201498)
+   through least squares: 1.05378 (error = 0.169587)
+[2.11524]
+   actual: 0.855414
+   through lagrange: 0.855399 (error = 1.4596e-05)
+   through splines: 0.833195 (error = 0.0222186)
+   through least squares: 1.03665 (error = 0.181235)
+[2.1376]
+   actual: 0.843619
+   through lagrange: 0.843602 (error = 1.68583e-05)
+   through splines: 0.82069 (error = 0.0229295)
+   through least squares: 1.02905 (error = 0.185434)
+[2.14396]
+   actual: 0.840189
+   through lagrange: 0.840171 (error = 1.75438e-05)
+   through splines: 0.817066 (error = 0.0231228)
+   through least squares: 1.02679 (error = 0.186599)
+[2.16502]
+   actual: 0.828583
+   through lagrange: 0.828563 (error = 1.99551e-05)
+   through splines: 0.804849 (error = 0.0237345)
+   through least squares: 1.01894 (error = 0.19036)
+[2.19978]
+   actual: 0.808626
+   through lagrange: 0.808601 (error = 2.44295e-05)
+   through splines: 0.783982 (error = 0.0246439)
+   through least squares: 1.00485 (error = 0.196222)
+[2.20172]
+   actual: 0.807483
+   through lagrange: 0.807458 (error = 2.46981e-05)
+   through splines: 0.782792 (error = 0.0246908)
+   through least squares: 1.00402 (error = 0.196535)
+[2.35433]
+   actual: 0.708421
+   through lagrange: 0.708369 (error = 5.28204e-05)
+   through splines: 0.681394 (error = 0.0270278)
+   through least squares: 0.924287 (error = 0.215865)
+[2.37696]
+   actual: 0.692275
+   through lagrange: 0.692217 (error = 5.82457e-05)
+   through splines: 0.665139 (error = 0.0271357)
+   through least squares: 0.909968 (error = 0.217693)
+[2.41294]
+   actual: 0.665862
+   through lagrange: 0.665795 (error = 6.75668e-05)
+   through splines: 0.638686 (error = 0.0271767)
+   through least squares: 0.885818 (error = 0.219956)
+[2.41454]
+   actual: 0.664668
+   through lagrange: 0.6646 (error = 6.80007e-05)
+   through splines: 0.637493 (error = 0.0271747)
+   through least squares: 0.884705 (error = 0.220037)
+[2.47836]
+   actual: 0.615667
+   through lagrange: 0.61558 (error = 8.66155e-05)
+   through splines: 0.588827 (error = 0.0268397)
+   through least squares: 0.837533 (error = 0.221866)
+[2.51195]
+   actual: 0.588855
+   through lagrange: 0.588757 (error = 9.73692e-05)
+   through splines: 0.562392 (error = 0.0264623)
+   through least squares: 0.8105 (error = 0.221645)
+[2.61476]
+   actual: 0.502797
+   through lagrange: 0.502664 (error = 0.000133266)
+   through splines: 0.478324 (error = 0.0244732)
+   through least squares: 0.718059 (error = 0.215262)
+[2.65008]
+   actual: 0.471957
+   through lagrange: 0.471811 (error = 0.000146078)
+   through splines: 0.448445 (error = 0.0235128)
+   through least squares: 0.682848 (error = 0.210891)
+[2.65952]
+   actual: 0.463616
+   through lagrange: 0.463466 (error = 0.000149486)
+   through splines: 0.440382 (error = 0.0232334)
+   through least squares: 0.673135 (error = 0.20952)
+[2.69248]
+   actual: 0.434167
+   through lagrange: 0.434006 (error = 0.000161198)
+   through splines: 0.411982 (error = 0.0221851)
+   through least squares: 0.6382 (error = 0.204033)
+[2.71741]
+   actual: 0.411577
+   through lagrange: 0.411407 (error = 0.000169724)
+   through splines: 0.390257 (error = 0.0213195)
+   through least squares: 0.610715 (error = 0.199139)
+[2.87154]
+   actual: 0.266782
+   through lagrange: 0.266578 (error = 0.000204462)
+   through splines: 0.252034 (error = 0.0147483)
+   through least squares: 0.42 (error = 0.153218)
+[2.92183]
+   actual: 0.217995
+   through lagrange: 0.217792 (error = 0.000202558)
+   through splines: 0.205767 (error = 0.0122277)
+   through least squares: 0.349809 (error = 0.131815)
+[2.9309]
+   actual: 0.209136
+   through lagrange: 0.208935 (error = 0.000201102)
+   through splines: 0.197378 (error = 0.0117577)
+   through least squares: 0.336727 (error = 0.127591)
+[2.95114]
+   actual: 0.1893
+   through lagrange: 0.189103 (error = 0.000196409)
+   through splines: 0.178606 (error = 0.0106932)
+   through least squares: 0.307047 (error = 0.117748)
+[2.97403]
+   actual: 0.166775
+   through lagrange: 0.166587 (error = 0.000188429)
+   through splines: 0.157309 (error = 0.00946595)
+   through least squares: 0.27269 (error = 0.105915)
+[3.00705]
+   actual: 0.134141
+   through lagrange: 0.13397 (error = 0.000171136)
+   through splines: 0.126483 (error = 0.0076579)
+   through least squares: 0.221643 (error = 0.0875016)
+[3.04488]
+   actual: 0.0965588
+   through lagrange: 0.0964174 (error = 0.000141319)
+   through splines: 0.0910184 (error = 0.00554034)
+   through least squares: 0.160932 (error = 0.0643732)
+[3.07817]
+   actual: 0.0633801
+   through lagrange: 0.0632756 (error = 0.0001045)
+   through splines: 0.0597323 (error = 0.00364781)
+   through least squares: 0.105557 (error = 0.0421764)
+[3.08331]
+   actual: 0.0582472
+   through lagrange: 0.0581494 (error = 9.7808e-05)
+   through splines: 0.0548936 (error = 0.0033536)
+   through least squares: 0.0968362 (error = 0.0385889)
+[3.12267]
+   actual: 0.0189224
+   through lagrange: 0.0188859 (error = 3.65037e-05)
+   through splines: 0.017831 (error = 0.00109137)
+   through least squares: 0.0286176 (error = 0.00969516)
