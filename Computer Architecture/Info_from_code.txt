@@ -1,0 +1,54 @@
+#include <stdio.h>
+#define imm1 8
+#define imm2 1
+
+int main() {
+    /**
+     * Sample code
+     */
+    int i,j;
+    float A[imm1][imm2], B[imm1][imm2];
+
+    for (i=0; i < imm1-1; i++) {
+        for (j=0; j < imm2; j++) {
+            if (i % 2 == 0)
+                A[i+1][j] = A[i+1][j] + A[i][j] + B[i][j];
+            else
+                A[i+1][j] = A[i][j] + B[i-1][j];
+        }
+    }
+
+    /**
+     *  Actual code ran
+     */
+    A[1][0] = A[1][0] + A[0][0] + B[0][0]; //i == 0
+    A[2][0] = A[1][0] + B[0][0];           //i == 1
+    A[3][0] = A[3][0] + A[2][0] + B[2][0]; //i == 2
+    A[4][0] = A[3][0] + B[2][0];           //i == 3
+    A[5][0] = A[5][0] + A[4][0] + B[4][0]; //i == 4
+    A[6][0] = A[5][0] + B[4][0];           //i == 5
+    A[7][0] = A[7][0] + A[6][0] + B[6][0]; //i == 6
+
+    /**
+     *  Array slots and their addresses
+     */
+    A[0][0]; //0000 0000 0000 0000 1000 0000 0000 0000 ,cache #1: index == 00, offset == 00000 ,cache #2: index == 000, offset == 0000
+    A[1][0]; //0000 0000 0000 0000 1000 0000 0000 0100 ,cache #1: index == 00, offset == 00100 ,cache #2: index == 000, offset == 0100
+    A[2][0]; //0000 0000 0000 0000 1000 0000 0000 1000 ,cache #1: index == 00, offset == 01000 ,cache #2: index == 000, offset == 1000
+    A[3][0]; //0000 0000 0000 0000 1000 0000 0000 1100 ,cache #1: index == 00, offset == 01100 ,cache #2: index == 000, offset == 1100
+    A[4][0]; //0000 0000 0000 0000 1000 0000 0001 0000 ,cache #1: index == 00, offset == 10000 ,cache #2: index == 001, offset == 0000
+    A[5][0]; //0000 0000 0000 0000 1000 0000 0001 0100 ,cache #1: index == 00, offset == 10100 ,cache #2: index == 001, offset == 0100
+    A[6][0]; //0000 0000 0000 0000 1000 0000 0001 1000 ,cache #1: index == 00, offset == 11000 ,cache #2: index == 001, offset == 1000
+    A[7][0]; //0000 0000 0000 0000 1000 0000 0001 1100 ,cache #1: index == 00, offset == 11100 ,cache #2: index == 001, offset == 1100
+
+    B[0][0]; //0000 0000 0000 0000 1000 0000 0010 0000 ,cache #1: index == 01, offset == 00000 ,cache #2: index == 010, offset == 0000
+    B[1][0]; //0000 0000 0000 0000 1000 0000 0010 0100 ,cache #1: index == 01, offset == 00100 ,cache #2: index == 010, offset == 0100
+    B[2][0]; //0000 0000 0000 0000 1000 0000 0010 1000 ,cache #1: index == 01, offset == 01000 ,cache #2: index == 010, offset == 1000
+    B[3][0]; //0000 0000 0000 0000 1000 0000 0010 1100 ,cache #1: index == 01, offset == 01100 ,cache #2: index == 010, offset == 1100
+    B[4][0]; //0000 0000 0000 0000 1000 0000 0011 0000 ,cache #1: index == 01, offset == 10000 ,cache #2: index == 011, offset == 0000
+    B[5][0]; //0000 0000 0000 0000 1000 0000 0011 0100 ,cache #1: index == 01, offset == 10100 ,cache #2: index == 011, offset == 0100
+    B[6][0]; //0000 0000 0000 0000 1000 0000 0011 1000 ,cache #1: index == 01, offset == 11000 ,cache #2: index == 011, offset == 1000
+    B[7][0]; //0000 0000 0000 0000 1000 0000 0011 1100 ,cache #1: index == 01, offset == 11100 ,cache #2: index == 011, offset == 1100
+
+    return 0;
+}
