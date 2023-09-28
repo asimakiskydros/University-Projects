@@ -1,4 +1,4 @@
-# Operational Research and Business Intelligence Project
+# Business Intelligence Project
 
 Project 1 header:
 
