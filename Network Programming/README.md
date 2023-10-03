@@ -3,8 +3,8 @@
 Project header:
 
 Create a server-client messaging system that uses a simple request-reply protocol. You may implement it using
-sockets or the built in RMI technology Java provides (in this project, RMI was used). Clients should send 
-requests to the server and it should send back a response and terminate the connection.
+sockets or the built in RMI technology Java provides (in this project, RMI was used). Clients should be able to send 
+requests to the server, receive a response and terminate the connection.
 
 At the bare minimum, the app should have the following:
 
