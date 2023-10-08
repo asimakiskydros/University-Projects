@@ -12,7 +12,7 @@ Complete the following tasks in C++ or Python:
    the Newton-Raphson method that uses the following algorithm: $x_{n+1} = x_n - (\frac{f'(x_n)}{f(x_n)} - \frac{f''(x_n)}{2f'(x_n)})^{-1}$
    and the variant of the secant method that is shown in the header\*.
 3. Compare the above variants based on the results they return. 
-4. Given these two matrices A(nxn) = $\{5 if i=j, -2 if |i-j|=1, 0 otherwise\}$, B(nx1) = $\{3, 1, 1, ..., 1, 3\}$,
+4. Given these two matrices A(nxn) = $\lbrace 5 \text{ if } i=j, -2 \text{ if } |i-j|=1, 0 \text{ otherwise}\rbrace$, B(nx1) = $\lbrace 3, 1, 1, ..., 1, 3\rbrace$,
    perform Gauss, Gauss-Seidel on them and Cholesky on A, after making sure A satisfies the appropriate conditions.
 5. Given the adjacency table found in the header\*, and assuming jump probability q = 0.15:
       1. Build the Google matrix and prove it is stochastic
@@ -26,4 +26,4 @@ Complete the following tasks in C++ or Python:
       6. Delete node 10 from the adjacency table and rebuild the Google matrix. Comment on the impact this change had on the
          eigenvalues of the pages that pointed on page 10 and those that were pointed to by page 10.
       
-*(\*I've lost the original header. Project courtesy of Aristotle University of Thessalonica, CSD.)*
+*\*I've lost the original header. Project courtesy of Aristotle University of Thessalonica, CSD.*
