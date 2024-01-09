@@ -17,7 +17,6 @@ Each different NN architecture had its own project:
 
 3. Use a Radial Basis Function NN OR a Hebbian Learning Network OR an Autoencoder to predict
    the chosen dataset or, in the case of autoencoders, to reconstruct the same or some different dataset like MNIST.
-   *... info concerning the first two options, I picked the autoencoder...*
    Use the Autoencoder to reconstruct the next digit from the one given as input. Alternatively/Moreover, implement
    an adder, such that the autoencoder reconstructs a pair of images representing the sum of the pair of images given
    as input. Compare its performance with image reconstruction through PCA. Provide train-test scores, test different
