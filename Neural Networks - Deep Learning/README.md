@@ -4,7 +4,7 @@ Each different NN architecture had its own project:
 
 0. Commit to a big, real-world-data dataset for the rest of your projects.
    Try to predict it with 1-Nearest Neighbor, 3-Nearest Neighbors and Nearest Centroid classifiers. Record the results.
-  - Basically a nothingburger project to get us used to dealing with large scale data and underlining that such problems are overcomplex for simple Machine Learning algorithms.
+   (*Basically a nothingburger project to get us used to dealing with large scale data and underlining that such problems are overcomplex for simple Machine Learning algorithms.*)
 
 1. Use a Multilayer Perceptron to predict the dataset chosen at project #0. 
    Implement your own or pick a pre-existing one. Provide train-test scores, correct and wrong classifications, test different
