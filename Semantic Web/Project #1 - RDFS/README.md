@@ -17,7 +17,7 @@ Your ontology should at least contain:
 * Values on all relevant properties of each instance
 * $\geq 3$ non-trivial SPARQL queries on your ontology
 
-Usage of OWL properties at this stage is strictly prohibited.
+Usage of OWL elements at this stage is strictly prohibited.
 
 *The ontology subject chosen here was NBA. Original header in greek can be found in this repository,
 courtesy of Aristotle University of Thessalonica, CSD.*
