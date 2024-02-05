@@ -14,7 +14,7 @@ Give mathematically and logically valid answers to the following problems:
    (*Algorithm Design*, Kleinberg & Tardos, ex.9.3).
 8. Given the *Explore(*$\Phi$*, d)* algorithm, prove that it returns true iff there exists a satisfying assignment for 3-SAT
    $\Phi'$ at distance at most d from $\Phi$. Give its time complexity as a function of n and d. Use this algorithm to solve
-   3-SAT at O(p(n)$\sqrt{3}^n$) time (*Algorithm Design*, Kleinberg & Tardos, ex.10.2).
+   3-SAT at O(p(n) $\sqrt{3}^n$ ) time (*Algorithm Design*, Kleinberg & Tardos, ex.10.2).
 10. Give a 3-approximation algorithm for the Load Balancing problem when the machines are split in k twice-as-fast and m normal ones
    (*Algorithm Design*, Kleinberg & Tardos, ex.11.6).
 12. *Assume some good at given quantity* $B \geq 0$*, n buyers, each of which will pay* $b_j \geq 0$ *for every unit of good that's assigned to them.*
