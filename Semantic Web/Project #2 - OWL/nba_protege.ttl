@@ -1,0 +1,1888 @@
+@prefix : <http://example.org/nba#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@base <http://example.org/nba#> .
+
+<http://example.org/nba> rdf:type owl:Ontology ;
+                          spin:imports <http://topbraid.org/spin/rdfsplus> ;
+                          owl:versionInfo "Created with TopBraid Composer" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://spinrdf.org/spin#imports
+spin:imports rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/nba#belongsInCoachingStaff
+:belongsInCoachingStaff rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :partOf ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :Coach ;
+                        rdfs:range :CoachingStaff .
+
+
+###  http://example.org/nba#belongsInMedicalTeam
+:belongsInMedicalTeam rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :partOf ;
+                      owl:inverseOf :hasMedic ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :Medic ;
+                      rdfs:range :MedicalTeam .
+
+
+###  http://example.org/nba#belongsInRoster
+:belongsInRoster rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :partOf ;
+                 owl:inverseOf :hasPlayer ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :Player ;
+                 rdfs:range :Roster .
+
+
+###  http://example.org/nba#coachedBy
+:coachedBy rdf:type owl:ObjectProperty ;
+           owl:inverseOf :coaches ;
+           rdfs:domain :Roster ;
+           rdfs:range :Coach .
+
+
+###  http://example.org/nba#coaches
+:coaches rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/nba#contractor
+:contractor rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Contract ;
+            rdfs:range :Team ;
+            rdfs:label "Η ομάδα που υπέγραψε το συμβόλαιο με τον παίκτη." .
+
+
+###  http://example.org/nba#coworkerOf
+:coworkerOf rdf:type owl:ObjectProperty ,
+                     owl:SymmetricProperty ,
+                     owl:TransitiveProperty ;
+            rdfs:domain :Person ;
+            rdfs:range :Person .
+
+
+###  http://example.org/nba#hasCoachingStaff
+:hasCoachingStaff rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Team ;
+                  rdfs:range :CoachingStaff .
+
+
+###  http://example.org/nba#hasHomeTurf
+:hasHomeTurf rdf:type owl:ObjectProperty ;
+             rdfs:domain :Team ;
+             rdfs:range :Arena .
+
+
+###  http://example.org/nba#hasInjury
+:hasInjury rdf:type owl:ObjectProperty ;
+           rdfs:domain :Player ;
+           rdfs:range :Injury .
+
+
+###  http://example.org/nba#hasMedic
+:hasMedic rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/nba#hasMedicalTeam
+:hasMedicalTeam rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ,
+                         owl:InverseFunctionalProperty ;
+                rdfs:domain :Team ;
+                rdfs:range :MedicalTeam .
+
+
+###  http://example.org/nba#hasOfficial
+:hasOfficial rdf:type owl:ObjectProperty ;
+             rdfs:domain :Game ;
+             rdfs:range :Official .
+
+
+###  http://example.org/nba#hasPlayer
+:hasPlayer rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/nba#hasRoster
+:hasRoster rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ,
+                    owl:InverseFunctionalProperty ;
+           rdfs:domain :Team ;
+           rdfs:range :Roster .
+
+
+###  http://example.org/nba#hasStatistics
+:hasStatistics rdf:type owl:ObjectProperty ;
+               rdfs:domain :Player ;
+               rdfs:range :Statistics .
+
+
+###  http://example.org/nba#hasWonAward
+:hasWonAward rdf:type owl:ObjectProperty ;
+             rdfs:domain :Player ;
+             rdfs:range :Award .
+
+
+###  http://example.org/nba#hosted
+:hosted rdf:type owl:ObjectProperty ;
+        rdfs:domain :Arena ;
+        rdfs:range :Game .
+
+
+###  http://example.org/nba#partOf
+:partOf rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/nba#partOfConference
+:partOfConference rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :partOf ;
+                  rdfs:domain :Division ;
+                  rdfs:range :Conference .
+
+
+###  http://example.org/nba#partOfDivision
+:partOfDivision rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :partOf ;
+                rdfs:domain :Team ;
+                rdfs:range :Division .
+
+
+###  http://example.org/nba#partOfSeason
+:partOfSeason rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :partOf ;
+              rdfs:domain :Game ;
+              rdfs:range :Season .
+
+
+###  http://example.org/nba#playedBy
+:playedBy rdf:type owl:ObjectProperty ;
+          owl:inverseOf :playedIn .
+
+
+###  http://example.org/nba#playedIn
+:playedIn rdf:type owl:ObjectProperty ;
+          rdfs:domain :Team ;
+          rdfs:range :Game .
+
+
+###  http://example.org/nba#rivalOf
+:rivalOf rdf:type owl:ObjectProperty ,
+                  owl:TransitiveProperty ;
+         rdfs:domain :Team ;
+         rdfs:range :Team .
+
+
+###  http://example.org/nba#sameDivisionWith
+:sameDivisionWith rdf:type owl:ObjectProperty ,
+                           owl:SymmetricProperty ,
+                           owl:TransitiveProperty ;
+                  rdfs:domain :Team ;
+                  rdfs:range :Team .
+
+
+###  http://example.org/nba#siblingOf
+:siblingOf rdf:type owl:ObjectProperty ,
+                    owl:SymmetricProperty ,
+                    owl:TransitiveProperty ;
+           rdfs:domain :Person ;
+           rdfs:range :Person .
+
+
+###  http://example.org/nba#signedContract
+:signedContract rdf:type owl:ObjectProperty ;
+                rdfs:domain :Player ;
+                rdfs:range :Contract .
+
+
+###  http://example.org/nba#teammateOf
+:teammateOf rdf:type owl:ObjectProperty ,
+                     owl:SymmetricProperty ,
+                     owl:TransitiveProperty ;
+            rdfs:domain :Player ;
+            rdfs:range :Player .
+
+
+###  http://example.org/nba#tradedWith
+:tradedWith rdf:type owl:ObjectProperty ,
+                     owl:SymmetricProperty ;
+            rdfs:domain :Team ;
+            rdfs:range :Team .
+
+
+###  http://example.org/nba#trainedBy
+:trainedBy rdf:type owl:ObjectProperty ;
+           owl:inverseOf :trains ;
+           rdfs:domain :Roster ;
+           rdfs:range :Trainer .
+
+
+###  http://example.org/nba#trains
+:trains rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/nba#treatedBy
+:treatedBy rdf:type owl:ObjectProperty ;
+           owl:inverseOf :treats ;
+           rdfs:domain :Injury ;
+           rdfs:range :Medic .
+
+
+###  http://example.org/nba#treats
+:treats rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/nba#winner
+:winner rdf:type owl:ObjectProperty ;
+        owl:inverseOf :won ;
+        rdfs:domain :Game ;
+        rdfs:range :Team .
+
+
+###  http://example.org/nba#won
+:won rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/nba#age
+:age rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Person ;
+     rdfs:range xsd:integer .
+
+
+###  http://example.org/nba#assists
+:assists rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Statistics ;
+         rdfs:range xsd:decimal .
+
+
+###  http://example.org/nba#blocks
+:blocks rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Statistics ;
+        rdfs:range xsd:decimal .
+
+
+###  http://example.org/nba#capacity
+:capacity rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Arena ;
+          rdfs:range xsd:integer ;
+          rdfs:label "Η χωρητικότητα του γηπέδου" .
+
+
+###  http://example.org/nba#championships
+:championships rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Team ;
+               rdfs:range xsd:integer .
+
+
+###  http://example.org/nba#city
+:city rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Team ;
+      rdfs:range xsd:string ;
+      rdfs:label "Η γηπεδούχος πόλη της ομάδος." .
+
+
+###  http://example.org/nba#date
+:date rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:date .
+
+
+###  http://example.org/nba#duration
+:duration rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Contract ;
+          rdfs:range xsd:integer ;
+          rdfs:label "Διάρκεια ισχύος του συμβολαίου" .
+
+
+###  http://example.org/nba#fouls
+:fouls rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain :Statistics ;
+       rdfs:range xsd:decimal .
+
+
+###  http://example.org/nba#from
+:from rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Injury ;
+      rdfs:range xsd:date ;
+      rdfs:label "Ημερομηνία που προέκυψε ο τραυματισμός." .
+
+
+###  http://example.org/nba#height
+:height rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Player ;
+        rdfs:range xsd:decimal .
+
+
+###  http://example.org/nba#minutes
+:minutes rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Statistics ;
+         rdfs:range xsd:decimal .
+
+
+###  http://example.org/nba#moneyValue
+:moneyValue rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Contract ;
+            rdfs:range xsd:integer ;
+            rdfs:label "Το χρηματικό ύψος του συμβολαίου" .
+
+
+###  http://example.org/nba#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+
+###  http://example.org/nba#period
+:period rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Season ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Πχ η σεζόν '2022-2023'" ;
+        rdfs:label "Η χρονιά της σεζόν" .
+
+
+###  http://example.org/nba#points
+:points rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Statistics ;
+        rdfs:range xsd:decimal .
+
+
+###  http://example.org/nba#rebounds
+:rebounds rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Statistics ;
+          rdfs:range xsd:decimal .
+
+
+###  http://example.org/nba#rings
+:rings rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain :Player ;
+       rdfs:range xsd:integer .
+
+
+###  http://example.org/nba#severity
+:severity rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Injury ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "1-10, 1 αδιάφορος πόνος, 10 αποπνικτικός πόνος" ;
+          rdfs:label "Η σοβαρότητα του τραυματισμού" .
+
+
+###  http://example.org/nba#steals
+:steals rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Statistics ;
+        rdfs:range xsd:decimal .
+
+
+###  http://example.org/nba#turnovers
+:turnovers rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Statistics ;
+           rdfs:range xsd:decimal .
+
+
+###  http://example.org/nba#until
+:until rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Injury ;
+       rdfs:range xsd:date ;
+       rdfs:label "Ημερομηνία αναμενόμενης ανάρρωσης από τον τραυματισμό" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/nba#ActivePlayer
+:ActivePlayer rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :belongsInRoster ;
+                                    owl:someValuesFrom :Roster
+                                  ] ;
+              rdfs:subClassOf :Player ;
+              rdfs:comment "Παίκτης που ανήκει στο ρόστερ κάποιας ομάδας." ;
+              rdfs:label "Ενεργός παίκτης" .
+
+
+###  http://example.org/nba#AllStarGame
+:AllStarGame rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :playedBy ;
+                                   owl:someValuesFrom :AllStarTeam
+                                 ] ;
+             rdfs:subClassOf :Game ;
+             rdfs:comment "Ματς το οποίο γίνεται μια φορά τον χρόνο, όπου συμμετέχουν η πιο πολυψηφισμένοι από το κοινό παίκτες της σεζόν." ;
+             rdfs:label "All Star ματς" .
+
+
+###  http://example.org/nba#AllStarPlayer
+:AllStarPlayer rdf:type owl:Class ;
+               rdfs:subClassOf :Player ;
+               rdfs:label "Πολυψηφισμένος από το κοινό Παίκτης" .
+
+
+###  http://example.org/nba#AllStarTeam
+:AllStarTeam rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :Team
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasRoster ;
+                                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty :hasPlayer ;
+                                                                           owl:allValuesFrom :AllStarPlayer
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:comment "Ομάδα που συμμετέχει σε All Star ματς, αποτελούμενη από πολυψηφισμένους από το κοινό παίκτες." .
+
+
+###  http://example.org/nba#AnkleInjury
+:AnkleInjury rdf:type owl:Class ;
+             rdfs:subClassOf :Injury ;
+             owl:disjointWith :GroinInjury ,
+                              :KneeInjury ,
+                              :ThighInjury ;
+             rdfs:label "Τραυματισμός αστραγάλου" .
+
+
+###  http://example.org/nba#Arena
+:Arena rdf:type owl:Class ;
+       rdfs:subClassOf rdfs:Resource ;
+       rdfs:comment "Αντιπροσωπεύει το γήπεδο-έδρα της αντίστοιχης ομάδας." ;
+       rdfs:label "Το γήπεδο της ομάδας." .
+
+
+###  http://example.org/nba#AssistantCoach
+:AssistantCoach rdf:type owl:Class ;
+                rdfs:subClassOf :Coach ;
+                rdfs:label "Βοηθητικός Προπονητής" .
+
+
+###  http://example.org/nba#Award
+:Award rdf:type owl:Class ;
+       rdfs:subClassOf rdfs:Resource ;
+       rdfs:comment "Διάφοροι τίτλοι που έχουν κερδίσει παίκτες, όπως MVP σε Finals ή Season, Defensive Player of the Year, Rookie of the Year." ;
+       rdfs:label "Τίτλοι-βραβεία παικτών." .
+
+
+###  http://example.org/nba#BigArena
+:BigArena rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :capacity ;
+                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                     owl:onDatatype xsd:integer ;
+                                                     owl:withRestrictions ( [ xsd:minInclusive 20000
+                                                                            ]
+                                                                          )
+                                                   ]
+                              ] ;
+          rdfs:subClassOf [ owl:intersectionOf ( :Arena
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :capacity ;
+                                                   owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                       owl:onDatatype xsd:integer ;
+                                                                       owl:withRestrictions ( [ xsd:minInclusive 20000
+                                                                                              ]
+                                                                                            )
+                                                                     ]
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+          rdfs:label "Στάδιο αυξημένης χωρητικότητας" .
+
+
+###  http://example.org/nba#Coach
+:Coach rdf:type owl:Class ;
+       rdfs:subClassOf :Person ;
+       owl:disjointWith :Medic ,
+                        :Official ,
+                        :Player ,
+                        :Trainer ;
+       rdfs:comment "Οι προπονητές χωρίζονται σε επικεφαλείς και βοηθητικούς." ;
+       rdfs:label "Προπονητής" .
+
+
+###  http://example.org/nba#CoachingStaff
+:CoachingStaff rdf:type owl:Class ;
+               rdfs:subClassOf rdfs:Resource ;
+               owl:disjointWith :MedicalTeam ,
+                                :Roster ;
+               rdfs:comment "Το σύνολο των προπονητών μιας ομάδας, είτε επικαφαλείς είτε βοηθητικοί." ;
+               rdfs:label "Προπονητικό Επιτελείο." .
+
+
+###  http://example.org/nba#Conference
+:Conference rdf:type owl:Class ;
+            rdfs:subClassOf rdfs:Resource ;
+            rdfs:comment "Το NBA χωρίζεται σε 2 μεγάλες περιφέρειες, την Ανατολική και τη Δυτική, ανάλογα με την τοποθεσία της κάθε ομάδας. Κάθε μια περιέχει ισάριθμο πλήθος ομάδων." ;
+            rdfs:label "Περιφέρεια" .
+
+
+###  http://example.org/nba#Contract
+:Contract rdf:type owl:Class ;
+          rdfs:subClassOf rdfs:Resource ;
+          rdfs:comment "Συμβόλαια μεταγραφών που υπογράφουν οι παίκτες με τις ομάδες." ;
+          rdfs:label "Συμβόλαια των παικτών." .
+
+
+###  http://example.org/nba#CriticalInjury
+:CriticalInjury rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :severity ;
+                                                      owl:hasValue 10
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :severity ;
+                                                      owl:hasValue 8
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :severity ;
+                                                      owl:hasValue 9
+                                                    ]
+                                                  )
+                                    ] ;
+                rdfs:subClassOf :Injury ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :treatedBy ;
+                                  owl:allValuesFrom :ER_Doctor
+                                ] ;
+                rdfs:comment "Τραυματισμός βαθμού άνω του 8, απαιτεί άμεση αντιμετώπιση." ;
+                rdfs:label "Κρίσιμος τραυματισμός" .
+
+
+###  http://example.org/nba#DPOY
+:DPOY rdf:type owl:Class ;
+      rdfs:subClassOf :Award ;
+      rdfs:label "Ο καλύτερος αμυντικός παίκτης της χρονιάς." .
+
+
+###  http://example.org/nba#Division
+:Division rdf:type owl:Class ;
+          rdfs:subClassOf rdfs:Resource ;
+          rdfs:comment "Κάθε περιφέρεια περιέχει συγκεκριμένες κατηγορίες ισοπλήθη σε ομάδες που ανταγωνίζονται μεταξύ τους." ;
+          rdfs:label "Κατηγορία ομάδων." .
+
+
+###  http://example.org/nba#DominantTeam
+:DominantTeam rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :championships ;
+                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                         owl:onDatatype xsd:integer ;
+                                                         owl:withRestrictions ( [ xsd:minInclusive 5
+                                                                                ]
+                                                                              )
+                                                       ]
+                                  ] ;
+              rdfs:subClassOf [ owl:intersectionOf ( :Team
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :championships ;
+                                                       owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:integer ;
+                                                                           owl:withRestrictions ( [ xsd:minInclusive 5
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+              rdfs:comment "Ομάδα με μεγάλο αριθμό κερδισμένων πρωταθλημάτων." ;
+              rdfs:label "Κυρίαρχη Ομάδα" .
+
+
+###  http://example.org/nba#ER_Doctor
+:ER_Doctor rdf:type owl:Class ;
+           rdfs:subClassOf :Medic ;
+           rdfs:label "Γιατρός Επειγόντων Περιστατικών." .
+
+
+###  http://example.org/nba#ER_MedicalTeam
+:ER_MedicalTeam rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasMedic ;
+                                      owl:someValuesFrom :ER_Doctor
+                                    ] ;
+                rdfs:subClassOf [ owl:intersectionOf ( :MedicalTeam
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasMedic ;
+                                                         owl:allValuesFrom :ER_Doctor
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                rdfs:comment "Αποτελείται από γιατρούς που εξειδικεύονται σε περιπτώσεις έκτακτης ανάγκης." ;
+                rdfs:label "Ομάδα Επειγόντων Περιστατικών." .
+
+
+###  http://example.org/nba#FinalsMVP
+:FinalsMVP rdf:type owl:Class ;
+           rdfs:subClassOf :Award ;
+           rdfs:label "Ο πιο σημαντικός παίκτης των τελικών." .
+
+
+###  http://example.org/nba#Game
+:Game rdf:type owl:Class ;
+      rdfs:subClassOf rdfs:Resource ;
+      rdfs:comment "Παιχνίδι της αγωνιστικής μεταξύ ομάδων." ;
+      rdfs:label "Ματς" .
+
+
+###  http://example.org/nba#GroinInjury
+:GroinInjury rdf:type owl:Class ;
+             rdfs:subClassOf :Injury ;
+             owl:disjointWith :KneeInjury ,
+                              :ThighInjury ;
+             rdfs:label "Τραυματισμός βουβονικής περιοχής" .
+
+
+###  http://example.org/nba#HeadCoach
+:HeadCoach rdf:type owl:Class ;
+           rdfs:subClassOf :Coach ;
+           rdfs:label "Βασικός ή Επικεφαλής προπονητής" .
+
+
+###  http://example.org/nba#HighScorer
+:HighScorer rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasStatistics ;
+                                  owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :points ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:onDatatype xsd:decimal ;
+                                                                            owl:withRestrictions ( [ xsd:minInclusive 20
+                                                                                                   ]
+                                                                                                 )
+                                                                          ]
+                                                     ]
+                                ] ;
+            rdfs:subClassOf [ owl:intersectionOf ( :Player
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasStatistics ;
+                                                     owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty :points ;
+                                                                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                              owl:onDatatype xsd:decimal ;
+                                                                                              owl:withRestrictions ( [ xsd:minInclusive 20
+                                                                                                                     ]
+                                                                                                                   )
+                                                                                            ]
+                                                                        ]
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:comment "τα βάζει τα σουτ" ;
+            rdfs:label "Παίκτης με υψηλό μέσο όρο πόντων" .
+
+
+###  http://example.org/nba#HighValueContract
+:HighValueContract rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty :moneyValue ;
+                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                              owl:onDatatype xsd:integer ;
+                                                              owl:withRestrictions ( [ xsd:minInclusive 100000000
+                                                                                     ]
+                                                                                   )
+                                                            ]
+                                       ] ;
+                   rdfs:subClassOf [ owl:intersectionOf ( :Contract
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :moneyValue ;
+                                                            owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:integer ;
+                                                                                owl:withRestrictions ( [ xsd:minInclusive 100000000
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                   rdfs:comment "Συμβόλαιο ύψους μεγαλύτερο από 100 εκατομμύρια." ;
+                   rdfs:label "Χρηματικά υψηλό συμβόλαιο" .
+
+
+###  http://example.org/nba#InjuredPlayer
+:InjuredPlayer rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasInjury ;
+                                     owl:someValuesFrom :Injury
+                                   ] ;
+               rdfs:subClassOf :Player ;
+               rdfs:label "Τραυματισμένος παίκτης" .
+
+
+###  http://example.org/nba#Injury
+:Injury rdf:type owl:Class ;
+        rdfs:subClassOf rdfs:Resource ;
+        rdfs:comment "Αποτελεί τυχόν τραυματισμό παικτών, όπως στον αστράγαλο, στην βουβονική περιοχή, στο γόνατο ή στον μοιρό." ;
+        rdfs:label "Τραυματισμός" .
+
+
+###  http://example.org/nba#InternDoctor
+:InternDoctor rdf:type owl:Class ;
+              rdfs:subClassOf :Medic ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :treats ;
+                                owl:allValuesFrom :MinorInjury
+                              ] .
+
+
+###  http://example.org/nba#KneeInjury
+:KneeInjury rdf:type owl:Class ;
+            rdfs:subClassOf :Injury ;
+            owl:disjointWith :ThighInjury ;
+            rdfs:label "Τραυματισμός γονάτου" .
+
+
+###  http://example.org/nba#LegInjury
+:LegInjury rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Class ;
+                                 owl:unionOf ( :AnkleInjury
+                                               :KneeInjury
+                                               :ThighInjury
+                                             )
+                               ] ;
+           rdfs:subClassOf :Injury ;
+           rdfs:comment "Τραυματισμός σε οποιοδήποτε μέρος του ποδιού (ένωση)." ;
+           rdfs:label "Τραυματισμός ποδιού" .
+
+
+###  http://example.org/nba#LongTermContract
+:LongTermContract rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :duration ;
+                                        owl:hasValue 5
+                                      ] ;
+                  rdfs:subClassOf :Contract ;
+                  rdfs:label "Συμβόλαιο μεγάλης διάρκειας" .
+
+
+###  http://example.org/nba#MVP
+:MVP rdf:type owl:Class ;
+     owl:equivalentClass [ rdf:type owl:Class ;
+                           owl:unionOf ( :FinalsMVP
+                                         :SeasonMVP
+                                       )
+                         ] ;
+     rdfs:subClassOf :Award ;
+     rdfs:label "Ο πιο σημαντικός παίκτης" .
+
+
+###  http://example.org/nba#MVPAwardedPlayer
+:MVPAwardedPlayer rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasWonAward ;
+                                        owl:someValuesFrom :MVP
+                                      ] ;
+                  rdfs:subClassOf :Player ;
+                  rdfs:comment "Παίκτης με βραβείο MVP." .
+
+
+###  http://example.org/nba#MajorInjury
+:MajorInjury rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :severity ;
+                                                   owl:hasValue 4
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :severity ;
+                                                   owl:hasValue 5
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :severity ;
+                                                   owl:hasValue 6
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :severity ;
+                                                   owl:hasValue 7
+                                                 ]
+                                               )
+                                 ] ;
+             rdfs:subClassOf :Injury ;
+             rdfs:comment "Μέτριου βαθμού τραυματισμός (4 - 7)." ;
+             rdfs:label "Σοβαρός Τραυματισμός" .
+
+
+###  http://example.org/nba#Medic
+:Medic rdf:type owl:Class ;
+       rdfs:subClassOf :Person ;
+       owl:disjointWith :Official ,
+                        :Player ,
+                        :Trainer ;
+       rdfs:label "Γιατρός" .
+
+
+###  http://example.org/nba#MedicalTeam
+:MedicalTeam rdf:type owl:Class ;
+             rdfs:subClassOf rdfs:Resource ;
+             owl:disjointWith :Roster ;
+             rdfs:comment "Αποτελεί το σύνολο των γιατρών μιας ομάδας" ;
+             rdfs:label "Ιατρικό Επιτελείο" .
+
+
+###  http://example.org/nba#MinorInjury
+:MinorInjury rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :severity ;
+                                                   owl:hasValue 1
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :severity ;
+                                                   owl:hasValue 2
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :severity ;
+                                                   owl:hasValue 3
+                                                 ]
+                                               )
+                                 ] ;
+             rdfs:subClassOf :Injury ;
+             rdfs:comment "Τραυματισμός μικρής ανησυχίας, βαθμού το πολύ 3" ;
+             rdfs:label "Μικροτραυματισμός" .
+
+
+###  http://example.org/nba#NBAProspect
+:NBAProspect rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :Player
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasWonAward ;
+                                                          owl:someValuesFrom :RookieOfTheYear
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :Person ;
+             rdfs:comment "Βλέψεις για μεγάλη καρίερα λόγω νίκης συγκεκριμένου βραβείου." ;
+             rdfs:label "Ανερχόμενο ταλέντο" .
+
+
+###  http://example.org/nba#Official
+:Official rdf:type owl:Class ;
+          rdfs:subClassOf :Person ;
+          owl:disjointWith :Player ,
+                           :Trainer ;
+          rdfs:comment "Οι επίσημοι διαχωρίζονται σε απλούς διαιτητές (Referees) που επιβλέπουν την ροή του παιχνιδιού και σε πιο επίσημους διαιτητές (Umpires) που αποφασίζουν φάουλς." ;
+          rdfs:label "Ο επίσημος ενός παιχνιδιού." .
+
+
+###  http://example.org/nba#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf rdfs:Resource ;
+        rdfs:label "Αφηρημένη έννοια του ατόμου." .
+
+
+###  http://example.org/nba#Player
+:Player rdf:type owl:Class ;
+        rdfs:subClassOf :Person ;
+        owl:disjointWith :Trainer ;
+        rdfs:comment "Χαρακτηρίζει έναν παίκτη μιας ομάδας." ;
+        rdfs:label "Παίκτης" .
+
+
+###  http://example.org/nba#Referee
+:Referee rdf:type owl:Class ;
+         rdfs:subClassOf :Official ;
+         rdfs:label "Διαιτητής πεδίου" .
+
+
+###  http://example.org/nba#RookieOfTheYear
+:RookieOfTheYear rdf:type owl:Class ;
+                 rdfs:subClassOf :Award ;
+                 rdfs:comment "Ένας παίκτης γίνεται να παραλάβει αυτό το βραβείο μόνο στη πρώτη του σεζόν." ;
+                 rdfs:label "Ο καινούργιος παίκτης με το μεγαλύτερο δυναμικό." .
+
+
+###  http://example.org/nba#Roster
+:Roster rdf:type owl:Class ;
+        rdfs:subClassOf rdfs:Resource ;
+        rdfs:comment "Το σύνολο των παικτών μιας ομάδας." ;
+        rdfs:label "Το σχήμα μιας ομάδας" .
+
+
+###  http://example.org/nba#Season
+:Season rdf:type owl:Class ;
+        rdfs:subClassOf rdfs:Resource ;
+        rdfs:label "Αγωνιστική σεζόν." .
+
+
+###  http://example.org/nba#SeasonMVP
+:SeasonMVP rdf:type owl:Class ;
+           rdfs:subClassOf :Award ;
+           rdfs:label "Ο πιο σημαντικός παίκτης της σεζόν." .
+
+
+###  http://example.org/nba#ShortTermContract
+:ShortTermContract rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty :duration ;
+                                         owl:hasValue 1
+                                       ] ;
+                   rdfs:subClassOf :Contract ;
+                   rdfs:label "Συμβόλαιο μικρής διάρκειας" .
+
+
+###  http://example.org/nba#Statistics
+:Statistics rdf:type owl:Class ;
+            rdfs:subClassOf rdfs:Resource ;
+            rdfs:comment "Περιέχει πληροφορίες για τον παίκτη, όπως τον μέσο όρο των πόντων, ασιστ, κλπ." ;
+            rdfs:label "Στατιστικά παίκτη" .
+
+
+###  http://example.org/nba#TallPlayer
+:TallPlayer rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :height ;
+                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:onDatatype xsd:decimal ;
+                                                       owl:withRestrictions ( [ xsd:minInclusive 2.10
+                                                                              ]
+                                                                            )
+                                                     ]
+                                ] ;
+            rdfs:subClassOf [ owl:intersectionOf ( :Player
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :height ;
+                                                     owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                         owl:onDatatype xsd:decimal ;
+                                                                         owl:withRestrictions ( [ xsd:minInclusive 2.10
+                                                                                                ]
+                                                                                              )
+                                                                       ]
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Ψηλό παλικάρι." .
+
+
+###  http://example.org/nba#Team
+:Team rdf:type owl:Class ;
+      rdfs:subClassOf rdfs:Resource ;
+      rdfs:label "Ομάδα" .
+
+
+###  http://example.org/nba#ThighInjury
+:ThighInjury rdf:type owl:Class ;
+             rdfs:subClassOf :Injury ;
+             rdfs:label "Τραυματισμός μοιρού" .
+
+
+###  http://example.org/nba#TitleContender
+:TitleContender rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasRoster ;
+                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasPlayer ;
+                                                           owl:someValuesFrom :MVPAwardedPlayer
+                                                         ]
+                                    ] ;
+                rdfs:subClassOf :Team ;
+                rdfs:comment "Ομάδα που έχει στο ρόστερ τουλάχιστον έναν MVP." ;
+                rdfs:label "Φαβορί για τίτλο" .
+
+
+###  http://example.org/nba#Trainer
+:Trainer rdf:type owl:Class ;
+         rdfs:subClassOf :Person ;
+         rdfs:comment "Το άτομο υπεύθυνο για την εκγύμναση των αθλητών μιας ομάδας." ;
+         rdfs:label "Γυμναστής" .
+
+
+###  http://example.org/nba#Umpire
+:Umpire rdf:type owl:Class ;
+        rdfs:subClassOf :Official ;
+        rdfs:label "Διαιτητής σημάτων και αποφάσεων" .
+
+
+###  http://example.org/nba#Veteran
+:Veteran rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Player
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :age ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:integer ;
+                                                                           owl:withRestrictions ( [ xsd:minInclusive 32
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf [ owl:intersectionOf ( :Player
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :age ;
+                                                  owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                      owl:onDatatype xsd:integer ;
+                                                                      owl:withRestrictions ( [ xsd:minInclusive 32
+                                                                                             ]
+                                                                                           )
+                                                                    ]
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+         rdfs:comment "Παίκτης με μεγάλη εμπειρία" ;
+         rdfs:label "Βετεράνος παίκτης" .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/nba#Akinjo
+:Akinjo rdf:type owl:NamedIndividual ,
+                 :Player ;
+        :hasStatistics :AkinjoStatistics ;
+        :age 24 ;
+        :height 1.85 ;
+        :name "James Akinjo" .
+
+
+###  http://example.org/nba#AkinjoStatistics
+:AkinjoStatistics rdf:type owl:NamedIndividual ,
+                           :Statistics ;
+                  :assists 5.4 ;
+                  :blocks 0 ;
+                  :minutes 32.9 ;
+                  :points 14.0 ;
+                  :rebounds 2.7 ;
+                  :steals 1.6 .
+
+
+###  http://example.org/nba#Allegri
+:Allegri rdf:type owl:NamedIndividual ,
+                  :Player ;
+         :age 24 ;
+         :height 2.01 ;
+         :name "Angelo Allegri" .
+
+
+###  http://example.org/nba#AnkleInjury_1
+:AnkleInjury_1 rdf:type owl:NamedIndividual ,
+                        :AnkleInjury ;
+               :from "2023-02-27"^^xsd:date ;
+               :severity 7 ;
+               :until "2023-06-01"^^xsd:date .
+
+
+###  http://example.org/nba#Antetokounmpo
+:Antetokounmpo rdf:type owl:NamedIndividual ,
+                        :Player ;
+               :belongsInRoster :BucksRoster ;
+               :hasStatistics :AntetokounpoStatistics ;
+               :hasWonAward :DefensivePlayerOfTheYear_1 ,
+                            :FinalsMVP_1 ;
+               :signedContract :AntetokounmpoContract ;
+               :teammateOf :Lillard ;
+               :age 28 ;
+               :height 2.08 ;
+               :name "Giannis Antetokounmpo" ;
+               :rings 1 .
+
+
+###  http://example.org/nba#AntetokounmpoContract
+:AntetokounmpoContract rdf:type owl:NamedIndividual ,
+                                :Contract ;
+                       :contractor :Bucks ;
+                       :duration 3 ;
+                       :moneyValue 186000000 .
+
+
+###  http://example.org/nba#AntetokounpoStatistics
+:AntetokounpoStatistics rdf:type owl:NamedIndividual ,
+                                 :Statistics ;
+                        :assists 4.7 ;
+                        :blocks 1.7 ;
+                        :fouls 4.1 ;
+                        :minutes 32.6 ;
+                        :points 22.8 ;
+                        :rebounds 9.6 ;
+                        :steals 1.1 ;
+                        :turnovers 2.9 .
+
+
+###  http://example.org/nba#Baker
+:Baker rdf:type owl:NamedIndividual ,
+                :AssistantCoach ;
+       :belongsInCoachingStaff :BucksCoachingStaff ;
+       :coworkerOf :Griffin ;
+       :age 52 ;
+       :name "Vin Baker" .
+
+
+###  http://example.org/nba#Ball
+:Ball rdf:type owl:NamedIndividual ,
+               :Player ;
+      :belongsInRoster :HornetsRoster ;
+      :hasInjury :AnkleInjury_1 ;
+      :hasWonAward :RookieOfTheYear_2 ;
+      :age 22 ;
+      :height 2.01 ;
+      :name "LaMelo Ball" .
+
+
+###  http://example.org/nba#Brothers
+:Brothers rdf:type owl:NamedIndividual ,
+                   :Referee ;
+          :age 59 ;
+          :name "Tony Brothers" .
+
+
+###  http://example.org/nba#Brown
+:Brown rdf:type owl:NamedIndividual ,
+                :Medic ;
+       :belongsInMedicalTeam :HeatMedicalTeam ;
+       :age 45 ;
+       :name "Wes Brown" .
+
+
+###  http://example.org/nba#Bucks
+:Bucks rdf:type owl:NamedIndividual ,
+                :AllStarTeam ,
+                :Team ;
+       :hasCoachingStaff :BucksCoachingStaff ;
+       :hasHomeTurf :BucksArena ;
+       :hasMedicalTeam :BucksMedicalTeam ;
+       :hasRoster :BucksRoster ;
+       :partOfDivision :Division_1 ;
+       :playedIn :Game_1 ;
+       :rivalOf :Bulls ;
+       :championships 2 ;
+       :city "Milwaukee" ;
+       :name "Milwaukee Bucks" .
+
+
+###  http://example.org/nba#BucksArena
+:BucksArena rdf:type owl:NamedIndividual ,
+                     :Arena ;
+            :hosted :Game_1 ;
+            :capacity 17385 ;
+            :name "Fiserv Forum" .
+
+
+###  http://example.org/nba#BucksCoachingStaff
+:BucksCoachingStaff rdf:type owl:NamedIndividual ,
+                             :CoachingStaff .
+
+
+###  http://example.org/nba#BucksMedicalTeam
+:BucksMedicalTeam rdf:type owl:NamedIndividual ,
+                           :MedicalTeam .
+
+
+###  http://example.org/nba#BucksRoster
+:BucksRoster rdf:type owl:NamedIndividual ,
+                      :Roster ;
+             :coachedBy :Baker ,
+                        :Griffin ;
+             :trainedBy :Faust .
+
+
+###  http://example.org/nba#Bulls
+:Bulls rdf:type owl:NamedIndividual ,
+                :Team ;
+       :hasCoachingStaff :BullsCoachingStaff ;
+       :hasHomeTurf :BullsArena ;
+       :hasMedicalTeam :BullsMedicalTeam ;
+       :hasRoster :BullsRoster ;
+       :partOfDivision :Division_1 ;
+       :rivalOf :Celtics ;
+       :sameDivisionWith :Bucks ;
+       :championships 6 ;
+       :city "Chicago" ;
+       :name "Chicago Bulls" .
+
+
+###  http://example.org/nba#BullsArena
+:BullsArena rdf:type owl:NamedIndividual ,
+                     :Arena ;
+            :capacity 23500 ;
+            :name "United Center" .
+
+
+###  http://example.org/nba#BullsCoachingStaff
+:BullsCoachingStaff rdf:type owl:NamedIndividual ,
+                             :CoachingStaff .
+
+
+###  http://example.org/nba#BullsMedicalTeam
+:BullsMedicalTeam rdf:type owl:NamedIndividual ,
+                           :MedicalTeam .
+
+
+###  http://example.org/nba#BullsRoster
+:BullsRoster rdf:type owl:NamedIndividual ,
+                      :Roster .
+
+
+###  http://example.org/nba#Butler
+:Butler rdf:type owl:NamedIndividual ,
+                 :Player ;
+        :belongsInRoster :HeatRoster ;
+        :hasInjury :KneeInjury_1 ;
+        :hasStatistics :ButlerStatistics ;
+        :signedContract :ButlerContract ;
+        :age 34 ;
+        :height 2.01 ;
+        :name "Jimmy Butler" ;
+        :rings 0 .
+
+
+###  http://example.org/nba#ButlerContract
+:ButlerContract rdf:type owl:NamedIndividual ,
+                         :Contract ;
+                :contractor :Heat ;
+                :duration 3 ;
+                :moneyValue 146000000 .
+
+
+###  http://example.org/nba#ButlerStatistics
+:ButlerStatistics rdf:type owl:NamedIndividual ,
+                           :Statistics ;
+                  :assists 4.2 ;
+                  :blocks 0.8 ;
+                  :fouls 3.6 ;
+                  :minutes 33.2 ;
+                  :points 18.2 ;
+                  :rebounds 5.3 ;
+                  :steals 1.6 ;
+                  :turnovers 1.2 .
+
+
+###  http://example.org/nba#Capers
+:Capers rdf:type owl:NamedIndividual ,
+                 :Referee ;
+        :age 63 ;
+        :name "James Capers" .
+
+
+###  http://example.org/nba#Cavaliers
+:Cavaliers rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :hasCoachingStaff :CavaliersCoachingStaff ;
+           :hasHomeTurf :CavaliersArena ;
+           :hasMedicalTeam :CavaliersMedicalTeam ;
+           :hasRoster :CavaliersRoster ;
+           :partOfDivision :Division_1 ;
+           :sameDivisionWith :Bucks ;
+           :championships 1 ;
+           :city "Cleveland" ;
+           :name "Cleveland Cavaliers" .
+
+
+###  http://example.org/nba#CavaliersArena
+:CavaliersArena rdf:type owl:NamedIndividual ,
+                         :Arena ;
+                :capacity 19432 ;
+                :name "Rocket Mortgage Fieldhouse" .
+
+
+###  http://example.org/nba#CavaliersCoachingStaff
+:CavaliersCoachingStaff rdf:type owl:NamedIndividual ,
+                                 :CoachingStaff .
+
+
+###  http://example.org/nba#CavaliersMedicalTeam
+:CavaliersMedicalTeam rdf:type owl:NamedIndividual ,
+                               :MedicalTeam .
+
+
+###  http://example.org/nba#CavaliersRoster
+:CavaliersRoster rdf:type owl:NamedIndividual ,
+                          :Roster .
+
+
+###  http://example.org/nba#Celtics
+:Celtics rdf:type owl:NamedIndividual ,
+                  :AllStarTeam ,
+                  :Team ;
+         :hasCoachingStaff :CelticsCoachingStaff ;
+         :hasHomeTurf :CelticsArena ;
+         :hasMedicalTeam :CelticsMedicalTeam ;
+         :hasRoster :CelticsRoster ;
+         :partOfDivision :Division_4 ;
+         :rivalOf :Heat ;
+         :championships 17 ;
+         :city "Boston" ;
+         :name "Boston Celtics" .
+
+
+###  http://example.org/nba#CelticsArena
+:CelticsArena rdf:type owl:NamedIndividual ,
+                       :Arena ;
+              :capacity 19580 ;
+              :name "TD Garden" .
+
+
+###  http://example.org/nba#CelticsCoachingStaff
+:CelticsCoachingStaff rdf:type owl:NamedIndividual ,
+                               :CoachingStaff .
+
+
+###  http://example.org/nba#CelticsMedicalTeam
+:CelticsMedicalTeam rdf:type owl:NamedIndividual ,
+                             :MedicalTeam .
+
+
+###  http://example.org/nba#CelticsRoster
+:CelticsRoster rdf:type owl:NamedIndividual ,
+                        :Roster .
+
+
+###  http://example.org/nba#DefensivePlayerOfTheYear_1
+:DefensivePlayerOfTheYear_1 rdf:type owl:NamedIndividual ,
+                                     :DPOY ;
+                            :date "2023-12-04"^^xsd:date .
+
+
+###  http://example.org/nba#Division_1
+:Division_1 rdf:type owl:NamedIndividual ,
+                     :Division ;
+            :partOfConference :East ;
+            :name "Central Division" .
+
+
+###  http://example.org/nba#Division_2
+:Division_2 rdf:type owl:NamedIndividual ,
+                     :Division ;
+            :partOfConference :West ;
+            :name "Pacific Division" .
+
+
+###  http://example.org/nba#Division_3
+:Division_3 rdf:type owl:NamedIndividual ,
+                     :Division ;
+            :partOfConference :East ;
+            :name "Southeast Division" .
+
+
+###  http://example.org/nba#Division_4
+:Division_4 rdf:type owl:NamedIndividual ,
+                     :Division ;
+            :partOfConference :East ;
+            :name "Atlantic Division" .
+
+
+###  http://example.org/nba#Division_5
+:Division_5 rdf:type owl:NamedIndividual ,
+                     :Division ;
+            :partOfConference :West ;
+            :name "NorthWest Division" .
+
+
+###  http://example.org/nba#East
+:East rdf:type owl:NamedIndividual ,
+               :Conference ;
+      :name "Eastern Conference" .
+
+
+###  http://example.org/nba#Edwards
+:Edwards rdf:type owl:NamedIndividual ,
+                  :Player ;
+         :belongsInRoster :TimberwolvesRoster ;
+         :hasStatistics :EdwardsStatistics ;
+         :signedContract :EdwardsContract ;
+         :age 22 ;
+         :height 1.93 ;
+         :name "Anthony Edwards" ;
+         :rings 0 .
+
+
+###  http://example.org/nba#EdwardsContract
+:EdwardsContract rdf:type owl:NamedIndividual ,
+                          :Contract ;
+                 :contractor :Timberwolves ;
+                 :duration 5 ;
+                 :moneyValue 150000000 .
+
+
+###  http://example.org/nba#EdwardsStatistics
+:EdwardsStatistics rdf:type owl:NamedIndividual ,
+                            :Statistics ;
+                   :assists 7.1 ;
+                   :blocks 0.5 ;
+                   :fouls 3 ;
+                   :minutes 31 ;
+                   :points 20 ;
+                   :rebounds 7 ;
+                   :steals 2 ;
+                   :turnovers 3 .
+
+
+###  http://example.org/nba#Faust
+:Faust rdf:type owl:NamedIndividual ,
+                :Trainer ;
+       :age 63 ;
+       :name "Scott Faust" .
+
+
+###  http://example.org/nba#FinalsMVP_1
+:FinalsMVP_1 rdf:type owl:NamedIndividual ,
+                      :FinalsMVP ;
+             :date "2023-12-04"^^xsd:date .
+
+
+###  http://example.org/nba#FinalsMVP_2
+:FinalsMVP_2 rdf:type owl:NamedIndividual ,
+                      :FinalsMVP ;
+             :date "2020-12-05"^^xsd:date .
+
+
+###  http://example.org/nba#Game_1
+:Game_1 rdf:type owl:NamedIndividual ,
+                 :Game ;
+        :hasOfficial :Brothers ,
+                     :Lewis ;
+        :partOfSeason :Season_1 ;
+        :winner :Bucks .
+
+
+###  http://example.org/nba#Game_2
+:Game_2 rdf:type owl:NamedIndividual ,
+                 :Game ;
+        :hasOfficial :Capers ;
+        :partOfSeason :Season_1 ;
+        :winner :Lakers .
+
+
+###  http://example.org/nba#Griffin
+:Griffin rdf:type owl:NamedIndividual ,
+                  :HeadCoach ;
+         :belongsInCoachingStaff :BucksCoachingStaff ;
+         :coworkerOf :Antetokounmpo ;
+         :age 49 ;
+         :name "Adrien Griffin" .
+
+
+###  http://example.org/nba#GroinInjury_1
+:GroinInjury_1 rdf:type owl:NamedIndividual ,
+                        :GroinInjury ;
+               :treatedBy :Jones ;
+               :from "2023-10-15"^^xsd:date ;
+               :severity 9 ;
+               :until "2024-06-15"^^xsd:date .
+
+
+###  http://example.org/nba#Ham
+:Ham rdf:type owl:NamedIndividual ,
+              :HeadCoach ;
+     :belongsInCoachingStaff :LakersCoachingStaff ;
+     :age 50 ;
+     :name "Darvin Ham" .
+
+
+###  http://example.org/nba#Hawks
+:Hawks rdf:type owl:NamedIndividual ,
+                :Team ;
+       :tradedWith :Hornets ;
+       :city "Wollongong" ;
+       :name "Illawarra Hawks" .
+
+
+###  http://example.org/nba#Heat
+:Heat rdf:type owl:NamedIndividual ,
+               :Team ;
+      :hasCoachingStaff :HeatCoachingStaff ;
+      :hasHomeTurf :HeatArena ;
+      :hasMedicalTeam :HeatMedicalTeam ;
+      :hasRoster :HeatRoster ;
+      :partOfDivision :Division_3 ;
+      :playedIn :Game_1 ;
+      :championships 3 ;
+      :city "Miami" ;
+      :name "Miami Heat" .
+
+
+###  http://example.org/nba#HeatArena
+:HeatArena rdf:type owl:NamedIndividual ,
+                    :Arena ;
+           :capacity 19600 ;
+           :name "Kaseya Center" .
+
+
+###  http://example.org/nba#HeatCoachingStaff
+:HeatCoachingStaff rdf:type owl:NamedIndividual ,
+                            :CoachingStaff .
+
+
+###  http://example.org/nba#HeatMedicalTeam
+:HeatMedicalTeam rdf:type owl:NamedIndividual ,
+                          :MedicalTeam .
+
+
+###  http://example.org/nba#HeatRoster
+:HeatRoster rdf:type owl:NamedIndividual ,
+                     :Roster ;
+            :coachedBy :Spoelstra ;
+            :trainedBy :Sabol .
+
+
+###  http://example.org/nba#Hornets
+:Hornets rdf:type owl:NamedIndividual ,
+                  :Team ;
+         :hasHomeTurf :HornetsArena ;
+         :hasRoster :HornetsRoster ;
+         :championships 0 ;
+         :city "Charlotte" ;
+         :name "Charlotte Hornets" .
+
+
+###  http://example.org/nba#HornetsArena
+:HornetsArena rdf:type owl:NamedIndividual ,
+                       :Arena ;
+              :capacity 20000 ;
+              :name "Spectrum Center" .
+
+
+###  http://example.org/nba#HornetsRoster
+:HornetsRoster rdf:type owl:NamedIndividual ,
+                        :Roster .
+
+
+###  http://example.org/nba#James
+:James rdf:type owl:NamedIndividual ,
+                :Player ;
+       :belongsInRoster :LakersRoster ;
+       :hasInjury :GroinInjury_1 ;
+       :hasStatistics :JamesStatistics ;
+       :hasWonAward :FinalsMVP_2 ,
+                    :RookieOfTheYear_1 ,
+                    :SeasonMVP_1 ;
+       :signedContract :JamesContract ;
+       :age 38 ;
+       :height 2.06 ;
+       :name "Lebron James" ;
+       :rings 4 .
+
+
+###  http://example.org/nba#JamesContract
+:JamesContract rdf:type owl:NamedIndividual ,
+                        :Contract ;
+               :contractor :Lakers ;
+               :duration 2 ;
+               :moneyValue 99000000 .
+
+
+###  http://example.org/nba#JamesStatistics
+:JamesStatistics rdf:type owl:NamedIndividual ,
+                          :Statistics ;
+                 :assists 7.3 ;
+                 :blocks 1.5 ;
+                 :fouls 3.2 ;
+                 :minutes 38 ;
+                 :points 27.2 ;
+                 :rebounds 7.5 ;
+                 :steals 1.5 ;
+                 :turnovers 1.2 .
+
+
+###  http://example.org/nba#Jones
+:Jones rdf:type owl:NamedIndividual ,
+                :Medic ;
+       :belongsInMedicalTeam :LakersMedicalTeam ;
+       :age 55 ;
+       :name "Kristofer Jones" .
+
+
+###  http://example.org/nba#KneeInjury_1
+:KneeInjury_1 rdf:type owl:NamedIndividual ,
+                       :KneeInjury ;
+              :treatedBy :Brown ;
+              :from "2024-12-05"^^xsd:date ;
+              :severity 1 ;
+              :until "2024-12-15"^^xsd:date .
+
+
+###  http://example.org/nba#Lakers
+:Lakers rdf:type owl:NamedIndividual ,
+                 :Team ;
+        :hasCoachingStaff :LakersCoachingStaff ;
+        :hasHomeTurf :LakersArena ;
+        :hasMedicalTeam :LakersMedicalTeam ;
+        :hasRoster :LakersRoster ;
+        :partOfDivision :Division_2 ;
+        :playedIn :Game_2 ;
+        :championships 17 ;
+        :city "Los Angeles" ;
+        :name "Los Angeles Lakers" .
+
+
+###  http://example.org/nba#LakersArena
+:LakersArena rdf:type owl:NamedIndividual ,
+                      :Arena ;
+             :hosted :Game_2 ;
+             :capacity 20000 ;
+             :name "Crypto.com Arena" .
+
+
+###  http://example.org/nba#LakersCoachingStaff
+:LakersCoachingStaff rdf:type owl:NamedIndividual ,
+                              :CoachingStaff .
+
+
+###  http://example.org/nba#LakersMedicalTeam
+:LakersMedicalTeam rdf:type owl:NamedIndividual ,
+                            :MedicalTeam .
+
+
+###  http://example.org/nba#LakersRoster
+:LakersRoster rdf:type owl:NamedIndividual ,
+                       :Roster ;
+              :coachedBy :Ham ;
+              :trainedBy :Sancho .
+
+
+###  http://example.org/nba#Lewis
+:Lewis rdf:type owl:NamedIndividual ,
+                :Umpire ;
+       :age 51 ;
+       :name "Eric Lewis" .
+
+
+###  http://example.org/nba#Lillard
+:Lillard rdf:type owl:NamedIndividual ,
+                  :Player ;
+         :belongsInRoster :BucksRoster ;
+         :hasStatistics :LillardStatistics ;
+         :signedContract :LillardContract ;
+         :teammateOf :ThanasisAntetokounmpo ;
+         :age 33 ;
+         :height 1.88 ;
+         :name "Damian Lillard" ;
+         :rings 0 .
+
+
+###  http://example.org/nba#LillardContract
+:LillardContract rdf:type owl:NamedIndividual ,
+                          :Contract ;
+                 :contractor :Bucks ;
+                 :duration 1 ;
+                 :moneyValue 50000000 .
+
+
+###  http://example.org/nba#LillardStatistics
+:LillardStatistics rdf:type owl:NamedIndividual ,
+                            :Statistics ;
+                   :assists 4.2 ;
+                   :blocks 0.3 ;
+                   :fouls 1.9 ;
+                   :minutes 36.3 ;
+                   :points 25.2 ;
+                   :rebounds 6.7 ;
+                   :steals 1 ;
+                   :turnovers 2.8 .
+
+
+###  http://example.org/nba#RookieOfTheYear_1
+:RookieOfTheYear_1 rdf:type owl:NamedIndividual ,
+                            :RookieOfTheYear ;
+                   :date "2004-12-05"^^xsd:date .
+
+
+###  http://example.org/nba#RookieOfTheYear_2
+:RookieOfTheYear_2 rdf:type owl:NamedIndividual ,
+                            :RookieOfTheYear ;
+                   :date "2021-06-17"^^xsd:date .
+
+
+###  http://example.org/nba#Sabol
+:Sabol rdf:type owl:NamedIndividual ,
+                :Trainer ;
+       :age 58 ;
+       :name "John Sabol" .
+
+
+###  http://example.org/nba#Sancho
+:Sancho rdf:type owl:NamedIndividual ,
+                 :Trainer ;
+        :age 39 ;
+        :name "Roger Sancho" .
+
+
+###  http://example.org/nba#SeasonMVP_1
+:SeasonMVP_1 rdf:type owl:NamedIndividual ,
+                      :SeasonMVP ;
+             :date "2013-12-05"^^xsd:date .
+
+
+###  http://example.org/nba#Season_1
+:Season_1 rdf:type owl:NamedIndividual ,
+                   :Season ;
+          :period "2022/2023" .
+
+
+###  http://example.org/nba#Small
+:Small rdf:type owl:NamedIndividual ,
+                :InternDoctor ,
+                :Medic ;
+       :belongsInMedicalTeam :BucksMedicalTeam ;
+       :age 43 ;
+       :name "Chris Small" .
+
+
+###  http://example.org/nba#Spoelstra
+:Spoelstra rdf:type owl:NamedIndividual ,
+                    :HeadCoach ;
+           :belongsInCoachingStaff :HeatCoachingStaff ;
+           :age 53 ;
+           :name "Eric Spoelstra" .
+
+
+###  http://example.org/nba#Tatum
+:Tatum rdf:type owl:NamedIndividual ,
+                :Player ;
+       :belongsInRoster :CelticsRoster ;
+       :hasStatistics :TatumStatistics ;
+       :signedContract :TatumContract ;
+       :age 25 ;
+       :height 2.11 ;
+       :name "Jason Tatum" ;
+       :rings 0 .
+
+
+###  http://example.org/nba#TatumContract
+:TatumContract rdf:type owl:NamedIndividual ,
+                        :Contract ;
+               :contractor :Celtics ;
+               :duration 5 ;
+               :moneyValue 200000000 .
+
+
+###  http://example.org/nba#TatumStatistics
+:TatumStatistics rdf:type owl:NamedIndividual ,
+                          :Statistics ;
+                 :assists 3.5 ;
+                 :blocks 0.7 ;
+                 :fouls 3.2 ;
+                 :minutes 36 ;
+                 :points 22.8 ;
+                 :rebounds 7.1 ;
+                 :steals 2.1 ;
+                 :turnovers 3.2 .
+
+
+###  http://example.org/nba#ThanasisAntetokounmpo
+:ThanasisAntetokounmpo rdf:type owl:NamedIndividual ,
+                                :Player ;
+                       :belongsInRoster :BucksRoster ;
+                       :siblingOf :Antetokounmpo .
+
+
+###  http://example.org/nba#ThighInjury_1
+:ThighInjury_1 rdf:type owl:NamedIndividual ,
+                        :ThighInjury ;
+               :treatedBy :Small .
+
+
+###  http://example.org/nba#Timberwolves
+:Timberwolves rdf:type owl:NamedIndividual ,
+                       :Team ;
+              :hasCoachingStaff :TimberwolvesCoachingStaff ;
+              :hasHomeTurf :TimberwolvesArena ;
+              :hasMedicalTeam :TimberwolvesMedicalTeam ;
+              :hasRoster :TimberwolvesRoster ;
+              :partOfDivision :Division_5 .
+
+
+###  http://example.org/nba#TimberwolvesArena
+:TimberwolvesArena rdf:type owl:NamedIndividual ,
+                            :Arena ;
+                   :capacity 20000 ;
+                   :name "Target Center" .
+
+
+###  http://example.org/nba#TimberwolvesCoachingStaff
+:TimberwolvesCoachingStaff rdf:type owl:NamedIndividual ,
+                                    :CoachingStaff .
+
+
+###  http://example.org/nba#TimberwolvesMedicalTeam
+:TimberwolvesMedicalTeam rdf:type owl:NamedIndividual ,
+                                  :MedicalTeam .
+
+
+###  http://example.org/nba#TimberwolvesRoster
+:TimberwolvesRoster rdf:type owl:NamedIndividual ,
+                             :Roster .
+
+
+###  http://example.org/nba#Warriors
+:Warriors rdf:type owl:NamedIndividual ,
+                   :Team ;
+          :hasCoachingStaff :WarriorsCoachingStaff ;
+          :hasHomeTurf :WarriorsArena ;
+          :hasMedicalTeam :WarriorsMedicalTeam ;
+          :hasRoster :WarriorsRoster ;
+          :partOfDivision :Division_2 .
+
+
+###  http://example.org/nba#WarriorsArena
+:WarriorsArena rdf:type owl:NamedIndividual ,
+                        :Arena ;
+               :capacity 18064 ;
+               :name "Chase Center" .
+
+
+###  http://example.org/nba#WarriorsCoachingStaff
+:WarriorsCoachingStaff rdf:type owl:NamedIndividual ,
+                                :CoachingStaff .
+
+
+###  http://example.org/nba#WarriorsMedicalTeam
+:WarriorsMedicalTeam rdf:type owl:NamedIndividual ,
+                              :MedicalTeam .
+
+
+###  http://example.org/nba#WarriorsRoster
+:WarriorsRoster rdf:type owl:NamedIndividual ,
+                         :Roster .
+
+
+###  http://example.org/nba#West
+:West rdf:type owl:NamedIndividual ,
+               :Conference ;
+      :name "Western Conference" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

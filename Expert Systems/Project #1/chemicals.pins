@@ -1,0 +1,260 @@
+; Mon Nov 27 21:59:10 EET 2023
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([chemicals_Class0] of  StrongAcid
+
+	(colour "none")
+	(effects
+		"burn skin"
+		"corrosive")
+	(name "Sulphuric Acid")
+	(pH 2.75)
+	(radioactivity FALSE)
+	(smell "none")
+	(solubility "soluble")
+	(specificGravity 1.0)
+	(spectroscopy "sulphur")
+	(symbol "H2SO4"))
+
+([chemicals_Class1] of  WeakAcid
+
+	(colour "none")
+	(name "Acetic Acid")
+	(pH 4.76)
+	(radioactivity FALSE)
+	(smell "vinegar")
+	(solubility "soluble")
+	(specificGravity 1.0)
+	(symbol "CH3COOH"))
+
+([chemicals_Class10000] of  WeakBase
+
+	(colour "white")
+	(name "Aluminum hydroxide")
+	(pH 8.0)
+	(radioactivity FALSE)
+	(smell "none")
+	(solubility "soluble")
+	(specificGravity 1.1)
+	(spectroscopy "metal")
+	(symbol "Al(OH)3"))
+
+([chemicals_Class10002] of  WeakBase
+
+	(colour "red")
+	(name "Chromogen 23")
+	(radioactivity FALSE)
+	(smell "none")
+	(solubility "soluble")
+	(specificGravity 0.9)
+	(symbol "??"))
+
+([chemicals_Class10003] of  WeakBase
+
+	(colour "none")
+	(name "Rubidium hydroxide")
+	(pH 10.0)
+	(radioactivity TRUE)
+	(smell "none")
+	(solubility "soluble")
+	(specificGravity 1.1)
+	(spectroscopy "metal")
+	(symbol "RbOH"))
+
+([chemicals_Class10004] of  Oil
+
+	(colour "none")
+	(effects "explosive")
+	(name "Petrol")
+	(radioactivity FALSE)
+	(smell "none")
+	(solubility "insoluble")
+	(specificGravity 0.9)
+	(spectroscopy "carbon")
+	(symbol "??"))
+
+([chemicals_Class10005] of  Oil
+
+	(colour "none")
+	(effects "highly toxic PCBs")
+	(name "Transformer oil")
+	(radioactivity FALSE)
+	(smell "none")
+	(solubility "insoluble")
+	(specificGravity 1.0)
+	(spectroscopy "carbon")
+	(symbol "??"))
+
+([chemicals_Class10007] of  Warehouse
+
+	(leaksTo [chemicals_Class40004])
+	(stores
+		[chemicals_Class1]
+		[chemicals_Class2]
+		[chemicals_Class3])
+	(warehouseName "Warehouse 8"))
+
+([chemicals_Class2] of  WeakAcid
+
+	(colour "none")
+	(name "Carbonic Acid")
+	(pH 4.68)
+	(radioactivity FALSE)
+	(smell "none")
+	(solubility "soluble")
+	(specificGravity 1.0)
+	(spectroscopy "carbon")
+	(symbol "H2CO3"))
+
+([chemicals_Class20000] of  Warehouse
+
+	(leaksTo [chemicals_Class40010])
+	(stores
+		[chemicals_Class8]
+		[chemicals_Class1])
+	(warehouseName "Warehouse 2"))
+
+([chemicals_Class20001] of  Warehouse
+
+	(leaksTo [chemicals_Class40009])
+	(stores
+		[chemicals_Class10003]
+		[chemicals_Class10005])
+	(warehouseName "Warehouse 3"))
+
+([chemicals_Class20002] of  Warehouse
+
+	(leaksTo [chemicals_Class40005])
+	(stores
+		[chemicals_Class8]
+		[chemicals_Class0])
+	(warehouseName "Warehouse 7"))
+
+([chemicals_Class20003] of  Warehouse
+
+	(leaksTo [chemicals_Class40006])
+	(stores
+		[chemicals_Class10000]
+		[chemicals_Class10005]
+		[chemicals_Class2])
+	(warehouseName "Warehouse 6"))
+
+([chemicals_Class20004] of  Warehouse
+
+	(leaksTo [chemicals_Class40007])
+	(stores
+		[chemicals_Class10002]
+		[chemicals_Class8]
+		[chemicals_Class10004])
+	(warehouseName "Warehouse 5"))
+
+([chemicals_Class20005] of  Warehouse
+
+	(leaksTo [chemicals_Class40008])
+	(stores
+		[chemicals_Class2]
+		[chemicals_Class1]
+		[chemicals_Class10004])
+	(warehouseName "Warehouse 4"))
+
+([chemicals_Class20006] of  Warehouse
+
+	(leaksTo [chemicals_Class40011])
+	(stores
+		[chemicals_Class0]
+		[chemicals_Class10004])
+	(warehouseName "Warehouse 1"))
+
+([chemicals_Class3] of  StrongBase
+
+	(colour "none")
+	(effects "corrosive")
+	(name "Sodium hydroxide")
+	(pH 13.0)
+	(radioactivity FALSE)
+	(smell "none")
+	(solubility "soluble")
+	(specificGravity 1.0)
+	(spectroscopy "sodium")
+	(symbol "NaOH"))
+
+([chemicals_Class30000] of  Drain
+
+	(drainTitle "Drain 13"))
+
+([chemicals_Class30001] of  Drain
+
+	(drainTitle "Drain 12"))
+
+([chemicals_Class30002] of  Drain
+
+	(drainsTo [chemicals_Class30000])
+	(drainTitle "Drain 11"))
+
+([chemicals_Class40002] of  Drain
+
+	(drainsTo [chemicals_Class30001])
+	(drainTitle "Drain 10"))
+
+([chemicals_Class40003] of  Drain
+
+	(drainsTo [chemicals_Class30001])
+	(drainTitle "Drain 9"))
+
+([chemicals_Class40004] of  Drain
+
+	(drainsTo [chemicals_Class30000])
+	(drainTitle "Drain 8"))
+
+([chemicals_Class40005] of  Drain
+
+	(drainsTo [chemicals_Class30002])
+	(drainTitle "Drain 7"))
+
+([chemicals_Class40006] of  Drain
+
+	(drainsTo [chemicals_Class30002])
+	(drainTitle "Drain 6"))
+
+([chemicals_Class40007] of  Drain
+
+	(drainsTo [chemicals_Class40002])
+	(drainTitle "Drain 5"))
+
+([chemicals_Class40008] of  Drain
+
+	(drainsTo [chemicals_Class40002])
+	(drainTitle "Drain 4"))
+
+([chemicals_Class40009] of  Drain
+
+	(drainsTo [chemicals_Class40003])
+	(drainTitle "Drain 3"))
+
+([chemicals_Class40010] of  Drain
+
+	(drainsTo [chemicals_Class40003])
+	(drainTitle "Drain 2"))
+
+([chemicals_Class40011] of  Drain
+
+	(drainsTo [chemicals_Class40003])
+	(drainTitle "Drain 1"))
+
+([chemicals_Class8] of  StrongAcid
+
+	(colour "none")
+	(effects
+		"burn skin"
+		"asphyxiation"
+		"corrosive")
+	(name "Hydrochloric Acid")
+	(pH 1.1)
+	(radioactivity FALSE)
+	(smell "Choking")
+	(solubility "soluble")
+	(specificGravity 1.0)
+	(spectroscopy "sulphur")
+	(symbol "HCI"))

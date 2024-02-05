@@ -1,0 +1,749 @@
+# baseURI: http://example.org/nba
+
+@prefix : <http://example.org/nba#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/nba>
+  rdf:type owl:Ontology ;
+  spin:imports <http://topbraid.org/spin/rdfsplus> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:AnkleInjury
+  rdf:type rdfs:Class ;
+  rdfs:label "Τραυματισμός αστραγάλου" ;
+  rdfs:subClassOf :Injury ;
+.
+:Antetokounmpo
+  rdf:type :Player ;
+  :age 28 ;
+  :belongsInRoster :BucksRoster ;
+  :hasStatistics :AntetokounpoStatistics ;
+  :hasWonAward :DefensivePlayerOfTheYear_1 ;
+  :hasWonAward :FinalsMVP_1 ;
+  :height 2.08 ;
+  :name "Giannis Antetokounmpo" ;
+  :rings 1 ;
+  :signedContract :AntetokounmpoContract ;
+.
+:AntetokounmpoContract
+  rdf:type :Contract ;
+  :contractor :Bucks ;
+  :duration 3 ;
+  :moneyValue 186000000 ;
+.
+:AntetokounpoStatistics
+  rdf:type :Statistics ;
+  :assists 4.7 ;
+  :blocks 1.7 ;
+  :fouls 4.1 ;
+  :minutes 32.6 ;
+  :points 22.8 ;
+  :rebounds 9.6 ;
+  :steals 1.1 ;
+  :turnovers 2.9 ;
+.
+:Arena
+  rdf:type rdfs:Class ;
+  rdfs:comment "Αντιπροσωπεύει το γήπεδο-έδρα της αντίστοιχης ομάδας." ;
+  rdfs:label "Το γήπεδο της ομάδας." ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:AssistantCoach
+  rdf:type rdfs:Class ;
+  rdfs:label "Βοηθητικός Προπονητής" ;
+  rdfs:subClassOf :Coach ;
+.
+:Award
+  rdf:type rdfs:Class ;
+  rdfs:comment "Διάφοροι τίτλοι που έχουν κερδίσει παίκτες, όπως MVP σε Finals ή Season, Defensive Player of the Year, Rookie of the Year." ;
+  rdfs:label "Τίτλοι-βραβεία παικτών." ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:Baker
+  rdf:type :AssistantCoach ;
+  :age 52 ;
+  :belongsInCoachingStaff :BucksCoachingStaff ;
+  :name "Vin Baker" ;
+.
+:Brothers
+  rdf:type :Referee ;
+  :age 59 ;
+  :name "Tony Brothers" ;
+.
+:Brown
+  rdf:type :Medic ;
+  :age 45 ;
+  :belongsInMedicalTeam :HeatMedicalTeam ;
+  :name "Wes Brown" ;
+.
+:Bucks
+  rdf:type :Team ;
+  :championships 2 ;
+  :city "Milwaukee" ;
+  :hasCoachingStaff :BucksCoachingStaff ;
+  :hasHomeTurf :BucksArena ;
+  :hasMedicalTeam :BucksMedicalTeam ;
+  :hasRoster :BucksRoster ;
+  :name "Milwaukee Bucks" ;
+  :partOfDivision :Division_1 ;
+  :playedIn :Game_1 ;
+.
+:BucksArena
+  rdf:type :Arena ;
+  :capacity 17385 ;
+  :name "Fiserv Forum" ;
+.
+:BucksCoachingStaff
+  rdf:type :CoachingStaff ;
+.
+:BucksMedicalTeam
+  rdf:type :MedicalTeam ;
+.
+:BucksRoster
+  rdf:type :Roster ;
+  :coachedBy :Baker ;
+  :coachedBy :Griffin ;
+  :trainedBy :Faust ;
+.
+:Butler
+  rdf:type :Player ;
+  :age 34 ;
+  :belongsInRoster :HeatRoster ;
+  :hasInjury :KneeInjury_1 ;
+  :hasStatistics :ButlerStatistics ;
+  :height 2.01 ;
+  :name "Jimmy Butler" ;
+  :rings 0 ;
+  :signedContract :ButlerContract ;
+.
+:ButlerContract
+  rdf:type :Contract ;
+  :contractor :Heat ;
+  :duration 3 ;
+  :moneyValue 146000000 ;
+.
+:ButlerStatistics
+  rdf:type :Statistics ;
+  :assists 4.2 ;
+  :blocks 0.8 ;
+  :fouls 3.6 ;
+  :minutes 33.2 ;
+  :points 18.2 ;
+  :rebounds 5.3 ;
+  :steals 1.6 ;
+  :turnovers 1.2 ;
+.
+:Capers
+  rdf:type :Referee ;
+  :age 0 ;
+  :name "James Capers" ;
+.
+:Coach
+  rdf:type rdfs:Class ;
+  rdfs:comment "Οι προπονητές χωρίζονται σε επικεφαλείς και βοηθητικούς." ;
+  rdfs:label "Προπονητής" ;
+  rdfs:subClassOf :Person ;
+.
+:CoachingStaff
+  rdf:type rdfs:Class ;
+  rdfs:comment "Το σύνολο των προπονητών μιας ομάδας, είτε επικαφαλείς είτε βοηθητικοί." ;
+  rdfs:label "Προπονητικό Επιτελείο." ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:Conference
+  rdf:type rdfs:Class ;
+  rdfs:comment "Το NBA χωρίζεται σε 2 μεγάλες περιφέρειες, την Ανατολική και τη Δυτική, ανάλογα με την τοποθεσία της κάθε ομάδας. Κάθε μια περιέχει ισάριθμο πλήθος ομάδων." ;
+  rdfs:label "Περιφέρεια" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:Contract
+  rdf:type rdfs:Class ;
+  rdfs:comment "Συμβόλαια μεταγραφών που υπογράφουν οι παίκτες με τις ομάδες." ;
+  rdfs:label "Συμβόλαια των παικτών." ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:DefensivePlayerOfTheYear
+  rdf:type rdfs:Class ;
+  rdfs:label "Ο καλύτερος αμυντικός παίκτης της χρονιάς." ;
+  rdfs:subClassOf :Award ;
+.
+:DefensivePlayerOfTheYear_1
+  rdf:type :DefensivePlayerOfTheYear ;
+  :date "2023-12-04"^^xsd:date ;
+.
+:Division
+  rdf:type rdfs:Class ;
+  rdfs:comment "Κάθε περιφέρεια περιέχει συγκεκριμένες κατηγορίες ισοπλήθη σε ομάδες που ανταγωνίζονται μεταξύ τους." ;
+  rdfs:label "Κατηγορία ομάδων." ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:Division_1
+  rdf:type :Division ;
+  :name "Central Division" ;
+  :partOfConference :East ;
+.
+:Division_2
+  rdf:type :Division ;
+  :name "Pacific Division" ;
+  :partOfConference :West ;
+.
+:Division_3
+  rdf:type :Division ;
+  :name "Southeast Division" ;
+  :partOfConference :East ;
+.
+:East
+  rdf:type :Conference ;
+  :name "Eastern Conference" ;
+.
+:Faust
+  rdf:type :Trainer ;
+  :age 63 ;
+  :name "Scott Faust" ;
+.
+:FinalsMVP
+  rdf:type rdfs:Class ;
+  rdfs:label "Ο πιο σημαντικός παίκτης των τελικών." ;
+  rdfs:subClassOf :MVP ;
+.
+:FinalsMVP_1
+  rdf:type :FinalsMVP ;
+  :date "2023-12-04"^^xsd:date ;
+.
+:FinalsMVP_2
+  rdf:type :FinalsMVP ;
+  :date "2020-12-05"^^xsd:date ;
+.
+:Game
+  rdf:type rdfs:Class ;
+  rdfs:comment "Παιχνίδι της αγωνιστικής μεταξύ ομάδων." ;
+  rdfs:label "Ματς" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:Game_1
+  rdf:type :Game ;
+  :hasOfficial :Brothers ;
+  :hasOfficial :Lewis ;
+  :partOfSeason :Season_1 ;
+  :winner :Bucks ;
+.
+:Game_2
+  rdf:type :Game ;
+  :hasOfficial :Capers ;
+  :partOfSeason :Season_1 ;
+  :winner :Lakers ;
+.
+:Griffin
+  rdf:type :HeadCoach ;
+  :age 49 ;
+  :belongsInCoachingStaff :BucksCoachingStaff ;
+  :name "Adrien Griffin" ;
+.
+:GroinInjury
+  rdf:type rdfs:Class ;
+  rdfs:label "Τραυματισμός βουβονικής περιοχής" ;
+  rdfs:subClassOf :Injury ;
+.
+:Ham
+  rdf:type :HeadCoach ;
+  :age 50 ;
+  :belongsInCoachingStaff :LakersCoachingStaff ;
+  :name "Darvin Ham" ;
+.
+:HeadCoach
+  rdf:type rdfs:Class ;
+  rdfs:label "Βασικός ή Επικεφαλής προπονητής" ;
+  rdfs:subClassOf :Coach ;
+.
+:Heat
+  rdf:type :Team ;
+  :championships 3 ;
+  :city "Miami" ;
+  :hasCoachingStaff :HeatCoachingStaff ;
+  :hasHomeTurf :HeatArena ;
+  :hasMedicalTeam :HeatMedicalTeam ;
+  :hasRoster :HeatRoster ;
+  :name "Miami Heat" ;
+  :partOfDivision :Division_3 ;
+  :playedIn :Game_1 ;
+.
+:HeatArena
+  rdf:type :Arena ;
+  :capacity 19600 ;
+  :name "Kaseya Center" ;
+.
+:HeatCoachingStaff
+  rdf:type :CoachingStaff ;
+.
+:HeatMedicalTeam
+  rdf:type :MedicalTeam ;
+.
+:HeatRoster
+  rdf:type :Roster ;
+  :coachedBy :Spoelstra ;
+  :trainedBy :Sabol ;
+.
+:Injury
+  rdf:type rdfs:Class ;
+  rdfs:comment "Αποτελεί τυχόν τραυματισμό παικτών, όπως στον αστράγαλο, στην βουβονική περιοχή, στο γόνατο ή στον μοιρό." ;
+  rdfs:label "Τραυματισμός" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:James
+  rdf:type :Player ;
+  :age 38 ;
+  :belongsInRoster :LakersRoster ;
+  :hasStatistics :JamesStatistics ;
+  :hasWonAward :FinalsMVP_2 ;
+  :hasWonAward :RookieOfTheYear_1 ;
+  :hasWonAward :SeasonMVP_1 ;
+  :height 2.06 ;
+  :name "Lebron James" ;
+  :rings 4 ;
+  :signedContract :JamesContract ;
+.
+:JamesContract
+  rdf:type :Contract ;
+  :contractor :Lakers ;
+  :duration 2 ;
+  :moneyValue 99000000 ;
+.
+:JamesStatistics
+  rdf:type :Statistics ;
+  :assists 7.3 ;
+  :blocks 1.5 ;
+  :fouls 3.2 ;
+  :minutes "38"^^xsd:decimal ;
+  :points 27.2 ;
+  :rebounds 7.5 ;
+  :steals 1.5 ;
+  :turnovers 1.2 ;
+.
+:Jones
+  rdf:type :Medic ;
+  :age 55 ;
+  :belongsInMedicalTeam :LakersMedicalTeam ;
+  :name "Kristofer Jones" ;
+.
+:KneeInjury
+  rdf:type rdfs:Class ;
+  rdfs:label "Τραυματισμός γονάτου" ;
+  rdfs:subClassOf :Injury ;
+.
+:KneeInjury_1
+  rdf:type :KneeInjury ;
+  :from "2024-12-05"^^xsd:date ;
+  :severity 1 ;
+  :treatedBy :Brown ;
+  :until "2024-12-15"^^xsd:date ;
+.
+:Lakers
+  rdf:type :Team ;
+  :championships 17 ;
+  :city "Los Angeles" ;
+  :hasCoachingStaff :LakersCoachingStaff ;
+  :hasHomeTurf :LakersArena ;
+  :hasMedicalTeam :LakersMedicalTeam ;
+  :hasRoster :LakersRoster ;
+  :name "Los Angeles Lakers" ;
+  :partOfDivision :Division_2 ;
+  :playedIn :Game_2 ;
+.
+:LakersArena
+  rdf:type :Arena ;
+  :capacity 20000 ;
+  :name "Crypto.com Arena" ;
+.
+:LakersCoachingStaff
+  rdf:type :CoachingStaff ;
+.
+:LakersMedicalTeam
+  rdf:type :MedicalTeam ;
+.
+:LakersRoster
+  rdf:type :Roster ;
+  :coachedBy :Ham ;
+  :trainedBy :Sancho ;
+.
+:Lewis
+  rdf:type :Umpire ;
+  :age 51 ;
+  :name "Eric Lewis" ;
+.
+:MVP
+  rdf:type rdfs:Class ;
+  rdfs:label "Ο πιο σημαντικός παίκτης" ;
+  rdfs:subClassOf :Award ;
+.
+:Medic
+  rdf:type rdfs:Class ;
+  rdfs:label "Γιατρός" ;
+  rdfs:subClassOf :Person ;
+.
+:MedicalTeam
+  rdf:type rdfs:Class ;
+  rdfs:comment "Αποτελεί το σύνολο των γιατρών μιας ομάδας" ;
+  rdfs:label "Ιατρικό Επιτελείο" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:Official
+  rdf:type rdfs:Class ;
+  rdfs:comment "Οι επίσημοι διαχωρίζονται σε απλούς διαιτητές (Referees) που επιβλέπουν την ροή του παιχνιδιού και σε πιο επίσημους διαιτητές (Umpires) που αποφασίζουν φάουλς." ;
+  rdfs:label "Ο επίσημος ενός παιχνιδιού." ;
+  rdfs:subClassOf :Person ;
+.
+:Person
+  rdf:type rdfs:Class ;
+  rdfs:label "Αφηρημένη έννοια του ατόμου." ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:Player
+  rdf:type rdfs:Class ;
+  rdfs:comment "Χαρακτηρίζει έναν παίκτη μιας ομάδας." ;
+  rdfs:label "Παίκτης" ;
+  rdfs:subClassOf :Person ;
+.
+:Referee
+  rdf:type rdfs:Class ;
+  rdfs:label "Διαιτητής πεδίου" ;
+  rdfs:subClassOf :Official ;
+.
+:RookieOfTheYear
+  rdf:type rdfs:Class ;
+  rdfs:label "Ο καινούργιος παίκτης με το μεγαλύτερο δυναμικό." ;
+  rdfs:subClassOf :Award ;
+.
+:RookieOfTheYear_1
+  rdf:type :RookieOfTheYear ;
+  :date "2004-12-05"^^xsd:date ;
+.
+:Roster
+  rdf:type rdfs:Class ;
+  rdfs:comment "Το σύνολο των παικτών μιας ομάδας." ;
+  rdfs:label "Το σχήμα μιας ομάδας" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:Sabol
+  rdf:type :Trainer ;
+  :age 58 ;
+  :name "John Sabol" ;
+.
+:Sancho
+  rdf:type :Trainer ;
+  :age 39 ;
+  :name "Roger Sancho" ;
+.
+:Season
+  rdf:type rdfs:Class ;
+  rdfs:label "Αγωνιστική σεζόν." ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:SeasonMVP
+  rdf:type rdfs:Class ;
+  rdfs:label "Ο πιο σημαντικός παίκτης της σεζόν." ;
+  rdfs:subClassOf :MVP ;
+.
+:SeasonMVP_1
+  rdf:type :SeasonMVP ;
+  :date "2013-12-05"^^xsd:date ;
+.
+:Season_1
+  rdf:type :Season ;
+  :period "2022/2023" ;
+.
+:Small
+  rdf:type :Medic ;
+  :age 43 ;
+  :belongsInMedicalTeam :BucksMedicalTeam ;
+  :name "Chris Small" ;
+.
+:Spoelstra
+  rdf:type :HeadCoach ;
+  :age 53 ;
+  :belongsInCoachingStaff :HeatCoachingStaff ;
+  :name "Eric Spoelstra" ;
+.
+:Statistics
+  rdf:type rdfs:Class ;
+  rdfs:comment "Περιέχει πληροφορίες για τον παίκτη, όπως τον μέσο όρο των πόντων, ασιστ, κλπ." ;
+  rdfs:label "Στατιστικά παίκτη" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:Team
+  rdf:type rdfs:Class ;
+  rdfs:label "Ομάδα" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+:ThighInjury
+  rdf:type rdfs:Class ;
+  rdfs:label "Τραυματισμός μοιρού" ;
+  rdfs:subClassOf :Injury ;
+.
+:Trainer
+  rdf:type rdfs:Class ;
+  rdfs:comment "Το άτομο υπεύθυνο για την εκγύμναση των αθλητών μιας ομάδας." ;
+  rdfs:label "Γυμναστής" ;
+  rdfs:subClassOf :Person ;
+.
+:Umpire
+  rdf:type rdfs:Class ;
+  rdfs:label "Διαιτητής σημάτων και αποφάσεων" ;
+  rdfs:subClassOf :Official ;
+.
+:West
+  rdf:type :Conference ;
+  :name "Western Conference" ;
+.
+:achieved
+  rdf:type rdf:Property ;
+.
+:age
+  rdf:type rdf:Property ;
+  rdfs:domain :Person ;
+  rdfs:range xsd:integer ;
+.
+:assists
+  rdf:type rdf:Property ;
+  rdfs:domain :Statistics ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :reached ;
+.
+:belongsInCoachingStaff
+  rdf:type rdf:Property ;
+  rdfs:domain :Coach ;
+  rdfs:range :CoachingStaff ;
+  rdfs:subPropertyOf :partOf ;
+.
+:belongsInMedicalTeam
+  rdf:type rdf:Property ;
+  rdfs:domain :Medic ;
+  rdfs:range :MedicalTeam ;
+  rdfs:subPropertyOf :partOf ;
+.
+:belongsInRoster
+  rdf:type rdf:Property ;
+  rdfs:domain :Player ;
+  rdfs:range :Roster ;
+  rdfs:subPropertyOf :partOf ;
+.
+:blocks
+  rdf:type rdf:Property ;
+  rdfs:domain :Statistics ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :reached ;
+.
+:capacity
+  rdf:type rdf:Property ;
+  rdfs:domain :Arena ;
+  rdfs:label "Η χωρητικότητα του γηπέδου" ;
+  rdfs:range xsd:integer ;
+.
+:championships
+  rdf:type rdf:Property ;
+  rdfs:domain :Team ;
+  rdfs:range xsd:integer ;
+  rdfs:subPropertyOf :achieved ;
+.
+:city
+  rdf:type rdf:Property ;
+  rdfs:domain :Team ;
+  rdfs:label "Η γηπεδούχος πόλη της ομάδος." ;
+  rdfs:range xsd:string ;
+.
+:coachedBy
+  rdf:type rdf:Property ;
+  rdfs:domain :Roster ;
+  rdfs:range :Coach ;
+.
+:contractor
+  rdf:type rdf:Property ;
+  rdfs:domain :Contract ;
+  rdfs:label "Η ομάδα που υπέγραψε το συμβόλαιο με τον παίκτη." ;
+  rdfs:range :Team ;
+.
+:date
+  rdf:type rdf:Property ;
+  rdfs:range xsd:date ;
+.
+:duration
+  rdf:type rdf:Property ;
+  rdfs:domain :Contract ;
+  rdfs:label "Διάρκεια ισχύος του συμβολαίου" ;
+  rdfs:range xsd:integer ;
+.
+:fouls
+  rdf:type rdf:Property ;
+  rdfs:domain :Statistics ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :reached ;
+.
+:from
+  rdf:type rdf:Property ;
+  rdfs:domain :Injury ;
+  rdfs:label "Ημερομηνία που προέκυψε ο τραυματισμός." ;
+  rdfs:range xsd:date ;
+.
+:hasCoachingStaff
+  rdf:type rdf:Property ;
+  rdfs:domain :Team ;
+  rdfs:range :CoachingStaff ;
+.
+:hasHomeTurf
+  rdf:type rdf:Property ;
+  rdfs:domain :Team ;
+  rdfs:range :Arena ;
+.
+:hasInjury
+  rdf:type rdf:Property ;
+  rdfs:domain :Player ;
+  rdfs:range :Injury ;
+.
+:hasMedicalTeam
+  rdf:type rdf:Property ;
+  rdfs:domain :Team ;
+  rdfs:range :MedicalTeam ;
+.
+:hasOfficial
+  rdf:type rdf:Property ;
+  rdfs:domain :Game ;
+  rdfs:range :Official ;
+.
+:hasRoster
+  rdf:type rdf:Property ;
+  rdfs:domain :Team ;
+  rdfs:range :Roster ;
+.
+:hasStatistics
+  rdf:type rdf:Property ;
+  rdfs:domain :Player ;
+  rdfs:range :Statistics ;
+.
+:hasWonAward
+  rdf:type rdf:Property ;
+  rdfs:domain :Player ;
+  rdfs:range :Award ;
+.
+:height
+  rdf:type rdf:Property ;
+  rdfs:domain :Player ;
+  rdfs:range xsd:decimal ;
+.
+:minutes
+  rdf:type rdf:Property ;
+  rdfs:domain :Statistics ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :reached ;
+.
+:moneyValue
+  rdf:type rdf:Property ;
+  rdfs:domain :Contract ;
+  rdfs:label "Το χρηματικό ύψος του συμβολαίου" ;
+  rdfs:range xsd:integer ;
+.
+:name
+  rdf:type rdf:Property ;
+  rdfs:range xsd:string ;
+.
+:partOf
+  rdf:type rdf:Property ;
+.
+:partOfConference
+  rdf:type rdf:Property ;
+  rdfs:domain :Division ;
+  rdfs:range :Conference ;
+  rdfs:subPropertyOf :partOf ;
+.
+:partOfDivision
+  rdf:type rdf:Property ;
+  rdfs:domain :Team ;
+  rdfs:range :Division ;
+  rdfs:subPropertyOf :partOf ;
+.
+:partOfSeason
+  rdf:type rdf:Property ;
+  rdfs:domain :Game ;
+  rdfs:range :Season ;
+  rdfs:subPropertyOf :partOf ;
+.
+:period
+  rdf:type rdf:Property ;
+  rdfs:comment "Πχ η σεζόν '2022-2023'" ;
+  rdfs:domain :Season ;
+  rdfs:label "Η χρονιά της σεζόν" ;
+  rdfs:range xsd:string ;
+.
+:playedIn
+  rdf:type rdf:Property ;
+  rdfs:domain :Team ;
+  rdfs:range :Game ;
+.
+:points
+  rdf:type rdf:Property ;
+  rdfs:domain :Statistics ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :reached ;
+.
+:reached
+  rdf:type rdf:Property ;
+.
+:rebounds
+  rdf:type rdf:Property ;
+  rdfs:domain :Statistics ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :reached ;
+.
+:rings
+  rdf:type rdf:Property ;
+  rdfs:domain :Player ;
+  rdfs:range xsd:integer ;
+  rdfs:subPropertyOf :achieved ;
+.
+:severity
+  rdf:type rdf:Property ;
+  rdfs:comment "1-10, 1 αδιάφορος πόνος, 10 αποπνικτικός πόνος" ;
+  rdfs:domain :Injury ;
+  rdfs:label "Η σοβαρότητα του τραυματισμού" ;
+  rdfs:range xsd:integer ;
+.
+:signedContract
+  rdf:type rdf:Property ;
+  rdfs:domain :Player ;
+  rdfs:range :Contract ;
+.
+:steals
+  rdf:type rdf:Property ;
+  rdfs:domain :Statistics ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :reached ;
+.
+:trainedBy
+  rdf:type rdf:Property ;
+  rdfs:domain :Roster ;
+  rdfs:range :Trainer ;
+.
+:treatedBy
+  rdf:type rdf:Property ;
+  rdfs:domain :Injury ;
+  rdfs:range :Medic ;
+.
+:turnovers
+  rdf:type rdf:Property ;
+  rdfs:domain :Statistics ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf :reached ;
+.
+:until
+  rdf:type rdf:Property ;
+  rdfs:domain :Injury ;
+  rdfs:label "Ημερομηνία αναμενόμενης ανάρρωσης από τον τραυματισμό" ;
+  rdfs:range xsd:date ;
+.
+:winner
+  rdf:type rdf:Property ;
+  rdfs:domain :Game ;
+  rdfs:range :Team ;
+.

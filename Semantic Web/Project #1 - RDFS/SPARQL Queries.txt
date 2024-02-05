@@ -1,0 +1,47 @@
+-> List all the documented players and their teams that have won Finals MVP and their contract
+   is worth more than $100m.
+
+SELECT ?player ?team
+WHERE {
+	?player :hasWonAward ?award .
+	?award a :FinalsMVP .
+	?player :belongsInRoster ?roster .
+	?team :hasRoster ?roster .
+	?player :signedContract ?contract .
+	?contract :moneyValue ?money .
+	FILTER (?money > 100000000)
+}
+
+-> Find the oldest documented coach of the team with the least amount of championships.
+
+SELECT ?name ?age
+WHERE {
+	{
+		SELECT ?team ?championships
+		WHERE {
+			?team :championships ?championships .
+		}
+		ORDER BY ?championships
+		LIMIT 1
+	}
+	?team :hasCoachingStaff ?staff .
+	?coach :belongsInCoachingStaff ?staff .
+	?coach :name ?name .
+	?coach :age ?age .
+}
+ORDER BY DESC(?age)
+LIMIT 1
+
+-> List the average points scored and the average minutes played among players in each conference.
+
+SELECT ?conference (AVG(?points) AS ?averagePoints) (AVG(?minutes) AS ?averageMins)
+WHERE {
+	?team :partOfDivision ?division .
+	?division :partOfConference ?conference .
+	?team :hasRoster ?roster .
+	?player :belongsInRoster ?roster .
+	?player :hasStatistics ?stats .
+	?stats :points ?points .
+	?stats :minutes ?minutes .
+}
+GROUP BY ?conference

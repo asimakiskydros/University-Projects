@@ -1,0 +1,313 @@
+; Mon Nov 27 21:59:10 EET 2023
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(multislot detects
+		(type INSTANCE)
+;+		(allowed-classes Drain)
+;+		(inverse-slot detectedFrom)
+		(create-accessor read-write))
+	(single-slot pH
+		(type FLOAT)
+		(range 1.0 14.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot stores
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+		(create-accessor read-write))
+	(single-slot StationTitle
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot drainTitle
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Symbol
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot effects
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot radioactivity
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot detectedBy
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot smell
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot leakedFrom
+		(type INSTANCE)
+;+		(allowed-classes Warehouse)
+;+		(inverse-slot leaksTo)
+		(create-accessor read-write))
+	(single-slot leaksTo
+		(type INSTANCE)
+;+		(allowed-classes Drain)
+;+		(cardinality 0 1)
+;+		(inverse-slot leakedFrom)
+		(create-accessor read-write))
+	(multislot drainedFrom
+		(type INSTANCE)
+;+		(allowed-classes Drain)
+;+		(inverse-slot drainsTo)
+		(create-accessor read-write))
+	(single-slot warehouseName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot detectedFrom
+		(type INSTANCE)
+;+		(allowed-classes ControlStation)
+;+		(cardinality 0 1)
+;+		(inverse-slot detects)
+		(create-accessor read-write))
+	(single-slot specificGravity
+		(type FLOAT)
+		(range 0.9 1.1)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot colour
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot solubility
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot chemicals_Class40019
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot chemicals_Class40017
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot symbol
+		(type STRING)
+		(default "??")
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot contaminates
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot connectedWith
+		(type INSTANCE)
+;+		(allowed-classes Drain Warehouse ControlStation)
+		(create-accessor read-write))
+	(multislot spectroscopy
+		(type STRING)
+		(cardinality 0 4)
+		(create-accessor read-write))
+	(single-slot drainsTo
+		(type INSTANCE)
+;+		(allowed-classes Drain)
+;+		(cardinality 0 1)
+;+		(inverse-slot drainedFrom)
+		(create-accessor read-write)))
+
+(defclass Chemical
+	(is-a USER)
+	(role concrete)
+	(single-slot radioactivity
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot pH
+		(type FLOAT)
+		(range 1.0 14.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot smell
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot specificGravity
+		(type FLOAT)
+		(range 0.9 1.1)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot colour
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot spectroscopy
+		(type STRING)
+		(cardinality 0 4)
+		(create-accessor read-write))
+	(single-slot symbol
+		(type STRING)
+		(default "??")
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot effects
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot solubility
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Base
+	(is-a Chemical)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 8.0 14.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot solubility
+		(type STRING)
+		(default "soluble")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass StrongBase
+	(is-a Base)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 11.0 14.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot effects
+		(type STRING)
+		(default "corrosive")
+		(create-accessor read-write)))
+
+(defclass WeakBase
+	(is-a Base)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 8.0 10.999)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Oil
+	(is-a Chemical)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 6.0 7.999)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot solubility
+		(type STRING)
+		(default "insoluble")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Acid
+	(is-a Chemical)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 1.0 5.999)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot solubility
+		(type STRING)
+		(default "soluble")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass StrongAcid
+	(is-a Acid)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 1.0 2.999)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot effects
+		(type STRING)
+		(default "burn skin" "corrosive")
+		(create-accessor read-write)))
+
+(defclass WeakAcid
+	(is-a Acid)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 3.0 5.999)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Warehouse
+	(is-a USER)
+	(role concrete)
+	(single-slot leaksTo
+		(type INSTANCE)
+;+		(allowed-classes Drain)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot stores
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+		(create-accessor read-write))
+	(single-slot warehouseName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Drain
+	(is-a USER)
+	(role concrete)
+	(multislot leakedFrom
+		(type INSTANCE)
+;+		(allowed-classes Warehouse)
+		(create-accessor read-write))
+	(multislot drainedFrom
+		(type INSTANCE)
+;+		(allowed-classes Drain)
+		(create-accessor read-write))
+	(single-slot drainTitle
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot drainsTo
+		(type INSTANCE)
+;+		(allowed-classes Drain)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot detectedFrom
+		(type INSTANCE)
+;+		(allowed-classes ControlStation)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass ControlStation
+	(is-a USER)
+	(role concrete)
+	(multislot detects
+		(type INSTANCE)
+;+		(allowed-classes Drain)
+		(create-accessor read-write))
+	(single-slot StationTitle
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
