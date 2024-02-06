@@ -15,4 +15,5 @@ Full project header:
           the contamination to a single store. The chemical culprits can be more than one.
   
 *\*The header was the same for both projects. The yellow part concerned part 1, while the rest part 2.*
+
 *Original header in greek can be found in this repository, courtesy of Aristotle University of Thessalonica, CSD.*
